@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pokerhelp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.pokerhelp.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter></intent-filter>
+        </activity>
+        <activity android:name=".preflopfirstcard"></activity>
+        <activity android:label="Imagen" android:name=".Image"></activity>
+        <activity android:name=".resultPreflop"></activity>
+        <activity android:name=".preflopsecondcard"></activity>
+        <activity android:name=".HeadsUp"></activity>
+        <activity android:name=".HeadsP1C1"></activity>
+        <activity android:name=".HeadsP1C2"></activity>
+        <activity android:name=".HeadsP2C1"></activity>
+        <activity android:name=".HeadsP2C2"></activity>
+    </application>
+
+</manifest>
