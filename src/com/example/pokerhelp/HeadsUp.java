@@ -65,11 +65,12 @@ public class HeadsUp extends Activity{
 	      GO.setOnClickListener(new Button.OnClickListener(){
 	    	  @Override
 	    	  public void onClick(View arg0) {
+	    		  //1 picas || 2 trevoles || 3 corazones || 4 diamantes
 	    		  
 	    		  F1 = new carta(1,14);
-	    		  F2 = new carta(2,7);
+	    		  F2 = new carta(1,7);
 	    		  F3 = new carta(1,8);
-	    		  F4 = new carta(2,9);
+	    		  F4 = new carta(1,9);
 	    		  F5 = new carta(1,7);
 	    		  
 	    		  
