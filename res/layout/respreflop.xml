@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/respreflop"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -37,5 +38,12 @@
         android:layout_weight="0.5"
         android:numStars="5"
         android:rating="2.5" />
+
+    <Button
+        android:id="@+id/atras2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chipwhite"
+        android:text="Atras" />
 
 </LinearLayout>

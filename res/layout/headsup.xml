@@ -36,7 +36,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/atras2"
             android:layout_width="64dp"
             android:layout_height="85dp"
             android:layout_weight="1" />
@@ -136,10 +136,11 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/go"
+            android:id="@+id/atras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Go" />
+            android:background="@drawable/chipwhite"
+            android:text="Atras" />
 
         <ProgressBar
             android:id="@+id/progreso"
@@ -157,6 +158,12 @@
             android:minHeight="50dp"
             android:minWidth="200dp"
             android:progress="32" />
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go" />
 
         <TextView
             android:id="@+id/win1"

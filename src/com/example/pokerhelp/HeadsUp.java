@@ -17,6 +17,7 @@ public class HeadsUp extends Activity{
 	Button P2C1;
 	Button P2C2;
 	Button GO;
+	Button atras;
 	public static TextView win1;
 	public static TextView lose1;
 	public static TextView split1;
@@ -81,7 +82,16 @@ public class HeadsUp extends Activity{
 	    		  new Calculate(mano1, mano2);
 	    		  
 		  }});
+	      atras = (Button)findViewById(R.id.atras);
 	      
+	      atras.setOnClickListener(new Button.OnClickListener(){
+	    	  @Override
+	    	  public void onClick(View arg0) {
+    		  	Intent i = new Intent(getApplicationContext(), MainActivity.class);
+    		  	i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    		  	startActivity(i);
+    		  	
+	      }});
 	      
 	      P1C1 = (Button)findViewById(R.id.P1C1);
 	      //P1C1.setBackgroundResource(R.drawable.cardjoker);
@@ -1018,4 +1028,5 @@ void llenarcartas(){
 	    	  }
 	      }
 	}
+
 }

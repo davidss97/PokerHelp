@@ -12,19 +12,18 @@
     tools:context="com.example.pokerhelp.MainActivity$PlaceholderFragment" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/atras2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Button" />
+        android:background="@drawable/zzcaraacaraboton" />
 
     <Button
         android:id="@+id/preflop"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/chipwhite"
-        android:text="     PREFLOP     " />
+        android:background="@drawable/zzpreflopboton" />
 
     <Button
         android:id="@+id/flop"
@@ -32,7 +31,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/chipred"
-        android:text="     FLOP     " />
+        android:text="     FLOP     "
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/turn"
@@ -40,7 +40,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/chipblue"
-        android:text="     TURN     " />
+        android:text="     TURN     "
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/river"
@@ -48,6 +49,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/chipblack"
-        android:text="     RIVER     " />
+        android:text="     RIVER     "
+        android:visibility="gone" />
 
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.pokerhelp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 public class resultPreflop extends Activity{
 	Button boton1;
 	Button boton2;
-	
+	Button atras;
 	TextView resultado;
 	RatingBar rate;
 	//////////////////////////////////////////
@@ -39,6 +40,16 @@ public class resultPreflop extends Activity{
 	    	  public void onClick(View arg0) {
 	    		  Toast.makeText(getApplicationContext(), "CARTA 1", Toast.LENGTH_SHORT).show();
 		  }});
+	      atras = (Button)findViewById(R.id.atras2);
+	      
+	      atras.setOnClickListener(new Button.OnClickListener(){
+	    	  @Override
+	    	  public void onClick(View arg0) {
+    		  	Intent i = new Intent(getApplicationContext(), MainActivity.class);
+    		  	i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    		  	startActivity(i);
+    		  	
+	      }});
 	      
 	      resultado = (TextView)findViewById(R.id.lose1);
 	      rate = (RatingBar)findViewById(R.id.ratingBar);
