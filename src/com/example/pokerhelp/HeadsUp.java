@@ -47,6 +47,7 @@ public class HeadsUp extends Activity{
 	
 	protected void onCreate(Bundle savedInstanceState) {
 	      super.onCreate(savedInstanceState);
+	      overridePendingTransition(R.anim.opentop, R.anim.closetop);
 	      setContentView(R.layout.headsup);
 	      
 	     // mano1 = new carta[7];
@@ -102,6 +103,7 @@ public class HeadsUp extends Activity{
 	    		  //Toast.makeText(getApplicationContext(), "2 de trevoles", Toast.LENGTH_SHORT).show();
 	    		  Intent i = new Intent(getApplicationContext(), HeadsP1C1.class);
 	    		  startActivity(i);
+	 //   		  //overridePendingTransition(R.anim.hold, R.anim.fadein);
 	    		  
 		  }});
 	      

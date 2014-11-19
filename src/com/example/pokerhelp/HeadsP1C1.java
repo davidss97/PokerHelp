@@ -70,6 +70,7 @@ public class HeadsP1C1 extends Activity{
 	
 	protected void onCreate(Bundle savedInstanceState) {
 	      super.onCreate(savedInstanceState);
+	      overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	      setContentView(R.layout.firstcard);
 	      clubs2 = (Button)findViewById(R.id.clubs2);
 	      //animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
@@ -84,7 +85,7 @@ public class HeadsP1C1 extends Activity{
 	    		  
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 	    		  
 		  }});
@@ -100,7 +101,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 	    		  
 		  }});
@@ -116,7 +117,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -131,7 +132,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -146,7 +147,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -161,7 +162,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -176,7 +177,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -191,7 +192,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -206,7 +207,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -221,7 +222,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -236,7 +237,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -251,7 +252,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -266,7 +267,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      //////////////////////////////////////////////////////////////////////////  
@@ -281,7 +282,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -296,7 +297,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -311,7 +312,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -326,7 +327,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -341,7 +342,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -356,7 +357,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -371,7 +372,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -386,7 +387,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -401,7 +402,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -416,7 +417,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -431,7 +432,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -446,7 +447,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -461,7 +462,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 
@@ -476,7 +477,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -491,7 +492,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -506,7 +507,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -521,7 +522,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -536,7 +537,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -551,7 +552,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -566,7 +567,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -581,7 +582,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -596,7 +597,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -611,7 +612,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -626,7 +627,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -641,7 +642,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -656,7 +657,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 
@@ -671,7 +672,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -686,7 +687,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -701,7 +702,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -716,7 +717,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -731,7 +732,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -746,7 +747,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -761,7 +762,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -776,7 +777,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -791,7 +792,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -806,7 +807,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -821,7 +822,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -836,7 +837,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -851,7 +852,7 @@ public class HeadsP1C1 extends Activity{
 
 	    		  
 	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i);
+	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 

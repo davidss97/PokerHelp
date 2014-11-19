@@ -70,6 +70,7 @@ public class preflopfirstcard extends Activity{
 	
 	protected void onCreate(Bundle savedInstanceState) {
 	      super.onCreate(savedInstanceState);
+	      overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	      setContentView(R.layout.firstcard);
 	      
 	      Bundle extras = getIntent().getExtras();
@@ -91,7 +92,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -107,7 +108,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubs4 = (Button)findViewById(R.id.clubs4);
@@ -122,7 +123,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubs5 = (Button)findViewById(R.id.clubs5);
@@ -137,7 +138,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubs6 = (Button)findViewById(R.id.clubs6);
@@ -152,7 +153,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubs7 = (Button)findViewById(R.id.clubs7);
@@ -167,7 +168,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubs8 = (Button)findViewById(R.id.clubs8);
@@ -182,7 +183,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubs9 = (Button)findViewById(R.id.clubs9);
@@ -197,7 +198,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubs10 = (Button)findViewById(R.id.clubs10);
@@ -212,7 +213,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubsj = (Button)findViewById(R.id.clubsj);
@@ -227,7 +228,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubsq = (Button)findViewById(R.id.clubsq);
@@ -242,7 +243,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubsk = (Button)findViewById(R.id.clubsk);
@@ -257,7 +258,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      clubsa = (Button)findViewById(R.id.clubsa);
@@ -272,7 +273,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      //////////////////////////////////////////////////////////////////////////  
 	      diamonds2 = (Button)findViewById(R.id.diamonds2);
@@ -287,7 +288,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamonds3 = (Button)findViewById(R.id.diamonds3);
@@ -302,7 +303,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamonds4 = (Button)findViewById(R.id.diamonds4);
@@ -317,7 +318,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamonds5 = (Button)findViewById(R.id.diamonds5);
@@ -332,7 +333,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamonds6 = (Button)findViewById(R.id.diamonds6);
@@ -347,7 +348,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamonds7 = (Button)findViewById(R.id.diamonds7);
@@ -362,7 +363,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamonds8 = (Button)findViewById(R.id.diamonds8);
@@ -377,7 +378,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamonds9 = (Button)findViewById(R.id.diamonds9);
@@ -392,7 +393,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamonds10 = (Button)findViewById(R.id.diamonds10);
@@ -407,7 +408,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamondsj = (Button)findViewById(R.id.diamondsj);
@@ -422,7 +423,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamondsq = (Button)findViewById(R.id.diamondsq);
@@ -437,7 +438,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamondsk = (Button)findViewById(R.id.diamondsk);
@@ -452,7 +453,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      diamondsa = (Button)findViewById(R.id.diamondsa);
@@ -467,7 +468,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 
 	      spades2 = (Button)findViewById(R.id.spades2);
@@ -482,7 +483,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spades3 = (Button)findViewById(R.id.spades3);
@@ -497,7 +498,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spades4 = (Button)findViewById(R.id.spades4);
@@ -512,7 +513,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spades5 = (Button)findViewById(R.id.spades5);
@@ -527,7 +528,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spades6 = (Button)findViewById(R.id.spades6);
@@ -542,7 +543,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spades7 = (Button)findViewById(R.id.spades7);
@@ -557,7 +558,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spades8 = (Button)findViewById(R.id.spades8);
@@ -572,7 +573,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spades9 = (Button)findViewById(R.id.spades9);
@@ -587,7 +588,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spades10 = (Button)findViewById(R.id.spades10);
@@ -602,7 +603,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spadesj = (Button)findViewById(R.id.spadesj);
@@ -617,7 +618,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spadesq = (Button)findViewById(R.id.spadesq);
@@ -632,7 +633,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spadesk = (Button)findViewById(R.id.spadesk);
@@ -647,7 +648,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      spadesa = (Button)findViewById(R.id.spadesa);
@@ -662,7 +663,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 
 	      hearts2 = (Button)findViewById(R.id.hearts2);
@@ -677,7 +678,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      hearts3 = (Button)findViewById(R.id.hearts3);
@@ -692,7 +693,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      hearts4 = (Button)findViewById(R.id.hearts4);
@@ -707,7 +708,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      hearts5 = (Button)findViewById(R.id.hearts5);
@@ -722,7 +723,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      hearts6 = (Button)findViewById(R.id.hearts6);
@@ -737,7 +738,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      hearts7 = (Button)findViewById(R.id.hearts7);
@@ -752,7 +753,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      hearts8 = (Button)findViewById(R.id.hearts8);
@@ -767,7 +768,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      hearts9 = (Button)findViewById(R.id.hearts9);
@@ -782,7 +783,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      hearts10 = (Button)findViewById(R.id.hearts10);
@@ -797,7 +798,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      heartsj = (Button)findViewById(R.id.heartsj);
@@ -812,7 +813,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      heartsq = (Button)findViewById(R.id.heartsq);
@@ -827,7 +828,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      heartsk = (Button)findViewById(R.id.heartsk);
@@ -842,7 +843,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      
 	      heartsa = (Button)findViewById(R.id.heartsa);
@@ -857,7 +858,7 @@ public class preflopfirstcard extends Activity{
 	    		  Intent i = new Intent(getApplicationContext(), preflopsecondcard.class);
 	    		  i.putExtra("pal", palo1);
 	    		  i.putExtra("val", valor1);
-	    		  startActivity(i);
+	    		  startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 
 	}
