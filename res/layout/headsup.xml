@@ -12,31 +12,31 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/Button01"
+            android:id="@+id/flop1"
             android:layout_width="64dp"
             android:layout_height="85dp"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/Button04"
+            android:id="@+id/flop2"
             android:layout_width="64dp"
             android:layout_height="85dp"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/Button03"
+            android:id="@+id/flop3"
             android:layout_width="64dp"
             android:layout_height="85dp"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/Button02"
+            android:id="@+id/turn"
             android:layout_width="64dp"
             android:layout_height="85dp"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/atras2"
+            android:id="@+id/river"
             android:layout_width="64dp"
             android:layout_height="85dp"
             android:layout_weight="1" />

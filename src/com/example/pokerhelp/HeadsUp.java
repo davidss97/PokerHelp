@@ -16,6 +16,12 @@ public class HeadsUp extends Activity{
 	Button P1C2;
 	Button P2C1;
 	Button P2C2;
+	Button flop1;
+	Button flop2;
+	Button flop3;
+	Button turn;
+	Button river;
+	
 	Button GO;
 	Button atras;
 	public static TextView win1;
@@ -60,8 +66,25 @@ public class HeadsUp extends Activity{
 	      win2 = (TextView)findViewById(R.id.win2);
 	      lose2 = (TextView)findViewById(R.id.lose2);
 	      split2 = (TextView)findViewById(R.id.split2);
+	      flop1 = (Button)findViewById(R.id.flop1);
+	      flop2 = (Button)findViewById(R.id.flop2);
+	      flop3 = (Button)findViewById(R.id.flop3);
+	      turn = (Button)findViewById(R.id.turn);
+	      river = (Button)findViewById(R.id.river);
 	      
 	      progreso = (ProgressBar)findViewById(R.id.progreso);
+	      
+	      F1 = new carta(1,14);
+		  flop1.setBackgroundResource(R.drawable.cardspadesa);
+		  F2 = new carta(1,7);
+		  flop2.setBackgroundResource(R.drawable.cardspades7);
+		  F3 = new carta(1,8);
+		  flop3.setBackgroundResource(R.drawable.cardspades8);
+		  F4 = new carta(1,9);
+		  turn.setBackgroundResource(R.drawable.cardspades9);
+		  F5 = new carta(2,7);
+		  river.setBackgroundResource(R.drawable.cardclubs7);
+	      
 	      GO = (Button)findViewById(R.id.go);
 	      
 	      GO.setOnClickListener(new Button.OnClickListener(){
@@ -69,11 +92,7 @@ public class HeadsUp extends Activity{
 	    	  public void onClick(View arg0) {
 	    		  //1 picas || 2 trevoles || 3 corazones || 4 diamantes
 	    		  
-	    		  F1 = new carta(1,14);
-	    		  F2 = new carta(1,7);
-	    		  F3 = new carta(1,8);
-	    		  F4 = new carta(1,9);
-	    		  F5 = new carta(1,7);
+	    		  
 	    		  
 	    		  
 	    		  carta[] mano1 = {C1,C2,F1,F2,F3,F4,F5};
