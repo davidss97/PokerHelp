@@ -30,9 +30,15 @@ public class Calculate {
 		//9: alta
 		
 		if(rankingmano1<rankingmano2){
-			HeadsUp.win1text("mano ganadora: escalera color " + rankingmano1 + " < " +rankingmano2 + " ----- " + orden1);
+			HeadsUp.win1text("100% -> " + rankingmano1 + " < " +rankingmano2 + " ----- " + orden1);
+			HeadsUp.win2text("0%");
+			
+		}else if(rankingmano1==rankingmano2){
+			HeadsUp.win1text("Empate -> "+ rankingmano1 + " // " +rankingmano2+ " ----- " + orden1);
+			HeadsUp.win2text("Empate");
 		}else{
-			HeadsUp.win1text("mano NO ganadora "+ rankingmano1 + " // " +rankingmano2+ " ----- " + orden1);
+			HeadsUp.win1text("0% -> "+ rankingmano1 + " // " +rankingmano2+ " ----- " + orden1);
+			HeadsUp.win2text("100%");
 		}
 		
 		/*	
@@ -100,7 +106,29 @@ public class Calculate {
 		return m;
 	}
 	public int ranking(carta[] m){
-		boolean color = false;
+		
+		boolean trio = false;
+		
+		if(
+				
+			((m[0].numero==(m[1].numero)
+			&& m[1].numero==(m[2].numero)))
+			||
+			((m[1].numero==((m[2].numero))
+			&& m[2].numero==((m[3].numero))))
+			||
+			((m[2].numero==(m[3].numero)
+			&& m[3].numero==(m[4].numero)))
+			||
+			((m[3].numero==(m[4].numero)
+			&& m[4].numero==(m[5].numero)))
+			||
+			((m[4].numero==(m[5].numero)
+			&& m[5].numero==(m[6].numero)))
+			
+			
+		){trio=true;}
+		
 		int cuentaColor = 0;
 		for(int i=1;i<7;i++){
 			if(m[0].palo == m[i].palo){
@@ -109,6 +137,7 @@ public class Calculate {
 				
 			}
 		}if(cuentaColor<4){
+			cuentaColor=0;	
 		for(int i=2;i<7;i++){
 			if(m[1].palo == m[i].palo){
 				
@@ -117,6 +146,7 @@ public class Calculate {
 			}
 		}}
 		if(cuentaColor<4){
+			cuentaColor=0;
 		for(int i=3;i<7;i++){
 			if(m[2].palo == m[i].palo){
 				
@@ -167,7 +197,7 @@ public class Calculate {
 			}
 		}
 		if(cuentaEscaleraNormal<4){
-			cuentaEscColor=0;
+			cuentaEscaleraNormal=0;
 			for(int i=0;i<7;i++){
 				if(m[1].numero==m[i].numero-(cuentaEscaleraNormal+1)){
 					
@@ -177,7 +207,7 @@ public class Calculate {
 			}
 		}
 		if(cuentaEscaleraNormal<4){
-			cuentaEscColor=0;
+			cuentaEscaleraNormal=0;
 			for(int i=0;i<7;i++){
 				if(m[2].numero==m[i].numero-(cuentaEscaleraNormal+1)){
 					
@@ -222,7 +252,11 @@ public class Calculate {
 				cuentaEscColor>=4
 				
 				)
-		{return 1;}//poker
+		{
+			cuentaColor = 0;
+			cuentaEscColor = 0;
+			cuentaEscaleraNormal = 0;
+			return 1;}//poker
 		else if(
 				((m[0].numero==(m[1].numero)
 				&& m[1].numero==(m[2].numero)
@@ -240,11 +274,16 @@ public class Calculate {
 				&& m[4].numero==(m[5].numero)
 				&& m[5].numero==(m[6].numero)))
 				)
-		{return 2;}
+		{
+			cuentaColor = 0;
+			cuentaEscColor = 0;
+			cuentaEscaleraNormal = 0;
+			return 2;}
 		//añadir valorPoker = m[3].palo
 		
 		else if(
-				((m[0].numero==(m[1].numero)
+				trio
+				/*((m[0].numero==(m[1].numero)
 				&& m[1].numero==(m[2].numero)))
 				||
 				((m[1].numero==((m[2].numero))
@@ -257,7 +296,7 @@ public class Calculate {
 				&& m[4].numero==(m[5].numero)))
 				||
 				((m[4].numero==(m[5].numero)
-				&& m[5].numero==(m[6].numero)))
+				&& m[5].numero==(m[6].numero)))*/
 		){//Si hay un trio pasara a mirar si hay un full house
 			if(((m[0].numero==(m[1].numero)//1
 				&& m[1].numero==(m[2].numero)))){
@@ -265,6 +304,9 @@ public class Calculate {
 						||m[4].numero==(m[5].numero)
 						||m[5].numero==(m[6].numero))
 					{
+						cuentaColor = 0;
+						cuentaEscColor = 0;
+						cuentaEscaleraNormal = 0;
 						return 3;
 					}
 			}else if(((m[1].numero==(m[2].numero)//2
@@ -272,6 +314,9 @@ public class Calculate {
 						if(m[4].numero==(m[5].numero)
 							||m[5].numero==(m[6].numero))
 						{
+							cuentaColor = 0;
+							cuentaEscColor = 0;
+							cuentaEscaleraNormal = 0;
 							return 3;
 						}
 			}else if(((m[2].numero==(m[3].numero)//3
@@ -279,6 +324,9 @@ public class Calculate {
 						if(m[5].numero==(m[6].numero)
 								||m[0].numero==(m[1].numero))
 						{
+							cuentaColor = 0;
+							cuentaEscColor = 0;
+							cuentaEscaleraNormal = 0;
 							return 3;
 						}
 			}else if(((m[3].numero==(m[4].numero)//4
@@ -286,6 +334,9 @@ public class Calculate {
 						if(m[0].numero==(m[1].numero)
 								||m[1].numero==(m[2].numero))
 						{
+							cuentaColor = 0;
+							cuentaEscColor = 0;
+							cuentaEscaleraNormal = 0;
 							return 3;
 						}
 			}else if(((m[4].numero==(m[5].numero)//4
@@ -294,17 +345,146 @@ public class Calculate {
 								||m[1].numero==(m[2].numero)
 								||m[2].numero==(m[3].numero))
 						{
+							cuentaColor = 0;
+							cuentaEscColor = 0;
+							cuentaEscaleraNormal = 0;
 							return 3;
 						}
 			}
 			
-		}else if(cuentaColor>=4){
+		}
+		if(cuentaColor>=4){
+			cuentaColor = 0;
+			cuentaEscColor = 0;
+			cuentaEscaleraNormal = 0;
 			return 4;
-		}else if(cuentaEscaleraNormal>=4){
+		}
+		if(cuentaEscaleraNormal>=4){
+			cuentaColor = 0;
+			cuentaEscColor = 0;
+			cuentaEscaleraNormal = 0;
 			return 5;
 		}
-		
-		return 10;
+		if(trio
+				/*
+				(m[0].numero==(m[1].numero)
+				&& m[1].numero==(m[2].numero))
+				||
+				(m[1].numero==(m[2].numero)
+				&& m[2].numero==(m[3].numero))
+				||
+				(m[2].numero==(m[3].numero)
+				&& m[3].numero==(m[4].numero))
+				||
+				(m[3].numero==(m[4].numero)
+				&& m[4].numero==(m[5].numero))
+				||
+				(m[4].numero==(m[5].numero)
+				&& m[5].numero==(m[6].numero))*/
+		){
+			cuentaColor = 0;
+			cuentaEscColor = 0;
+			cuentaEscaleraNormal = 0;
+			return 6;
+		}
+		if(
+				((m[0].numero==(m[1].numero)))
+				||
+				((m[1].numero==(m[2].numero)))
+				||
+				((m[2].numero==(m[3].numero)))
+				||
+				((m[3].numero==(m[4].numero)))
+				||
+				((m[4].numero==(m[5].numero)))
+				||
+				((m[4].numero==(m[5].numero)))
+		){
+			if(((m[0].numero==(m[1].numero)))){
+				if(m[2].numero==(m[3].numero)
+				||m[3].numero==(m[4].numero)
+				||m[4].numero==(m[5].numero)
+				||m[5].numero==(m[6].numero))
+				{
+					cuentaColor = 0;
+					cuentaEscColor = 0;
+					cuentaEscaleraNormal = 0;
+					return 7;
+				}	
+			}else if(((m[1].numero==(m[2].numero)))){
+				if(m[3].numero==(m[4].numero)
+				||m[4].numero==(m[5].numero)
+				||m[5].numero==(m[6].numero))
+				{
+					cuentaColor = 0;
+					cuentaEscColor = 0;
+					cuentaEscaleraNormal = 0;
+					return 7;
+				}	
+			}else if(((m[2].numero==(m[3].numero)))){
+				if(m[0].numero==(m[1].numero)
+				||m[4].numero==(m[5].numero)
+				||m[5].numero==(m[6].numero))
+				{
+					cuentaColor = 0;
+					cuentaEscColor = 0;
+					cuentaEscaleraNormal = 0;
+					return 7;
+				}	
+			}else if(((m[3].numero==(m[4].numero)))){
+				if(m[0].numero==(m[1].numero)
+				||m[1].numero==(m[2].numero)
+				||m[5].numero==(m[6].numero))
+				{
+					cuentaColor = 0;
+					cuentaEscColor = 0;
+					cuentaEscaleraNormal = 0;
+					return 7;
+				}	
+			}else if(((m[4].numero==(m[5].numero)))){
+				if(m[0].numero==(m[1].numero)
+				||m[1].numero==(m[2].numero)
+				||m[2].numero==(m[3].numero))
+				{
+					cuentaColor = 0;
+					cuentaEscColor = 0;
+					cuentaEscaleraNormal = 0;
+					return 7;
+				}	
+			}else if(((m[5].numero==(m[6].numero)))){
+				if(m[0].numero==(m[1].numero)
+				||m[1].numero==(m[2].numero)
+				||m[2].numero==(m[3].numero)
+				||m[3].numero==(m[4].numero))
+				{
+					cuentaColor = 0;
+					cuentaEscColor = 0;
+					cuentaEscaleraNormal = 0;
+					return 7;
+				}	
+			}
+		}if(
+				((m[0].numero==(m[1].numero)))
+				||
+				((m[1].numero==(m[2].numero)))
+				||
+				((m[2].numero==(m[3].numero)))
+				||
+				((m[3].numero==(m[4].numero)))
+				||
+				((m[4].numero==(m[5].numero)))
+				||
+				((m[4].numero==(m[5].numero)))
+		){
+			cuentaColor = 0;
+			cuentaEscColor = 0;
+			cuentaEscaleraNormal = 0;
+			return 8;
+		}
+		cuentaColor = 0;
+		cuentaEscColor = 0;
+		cuentaEscaleraNormal = 0;
+		return 9;
 		
 	}
 }

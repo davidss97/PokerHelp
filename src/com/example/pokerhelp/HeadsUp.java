@@ -168,6 +168,9 @@ public class HeadsUp extends Activity{
 	static void win1text(String text){
 		win1.setText(text);
 	}
+	static void win2text(String text){
+		win2.setText(text);
+	}
 	static void setProgreso(int n){
 		progreso.setProgress(n);
 	}
