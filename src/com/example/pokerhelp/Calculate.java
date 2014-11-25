@@ -100,6 +100,32 @@ public class Calculate {
 		return m;
 	}
 	public int ranking(carta[] m){
+		boolean color = false;
+		int cuentaColor = 0;
+		for(int i=1;i<7;i++){
+			if(m[0].palo == m[i].palo){
+				
+				cuentaColor++;
+				
+			}
+		}if(cuentaColor<4){
+		for(int i=2;i<7;i++){
+			if(m[1].palo == m[i].palo){
+				
+				cuentaColor++;
+				
+			}
+		}}
+		if(cuentaColor<4){
+		for(int i=3;i<7;i++){
+			if(m[2].palo == m[i].palo){
+				
+				cuentaColor++;
+				
+			}
+		}}
+		
+		/////////////////////////////////////////////////
 		int cuentaEscColor = 0;
 		for(int i=0;i<7;i++){
 			if(m[0].numero==m[i].numero-(cuentaEscColor+1)
@@ -131,6 +157,37 @@ public class Calculate {
 				}
 			}
 		}
+		/////////////////////////////////
+		int cuentaEscaleraNormal =0;
+		for(int i=0;i<7;i++){
+			if(m[0].numero==m[i].numero-(cuentaEscaleraNormal+1)){
+				
+				cuentaEscaleraNormal++;
+				
+			}
+		}
+		if(cuentaEscaleraNormal<4){
+			cuentaEscColor=0;
+			for(int i=0;i<7;i++){
+				if(m[1].numero==m[i].numero-(cuentaEscaleraNormal+1)){
+					
+					cuentaEscaleraNormal++;
+					
+				}
+			}
+		}
+		if(cuentaEscaleraNormal<4){
+			cuentaEscColor=0;
+			for(int i=0;i<7;i++){
+				if(m[2].numero==m[i].numero-(cuentaEscaleraNormal+1)){
+					
+					cuentaEscaleraNormal++;
+					
+				}
+			}
+		}
+		
+		
 		if(
 				/*((m[0].numero==(m[1].numero-1)
 				&& m[1].numero==(m[2].numero-1)
@@ -184,7 +241,70 @@ public class Calculate {
 				&& m[5].numero==(m[6].numero)))
 				)
 		{return 2;}
-		else return 10;
+		//añadir valorPoker = m[3].palo
+		
+		else if(
+				((m[0].numero==(m[1].numero)
+				&& m[1].numero==(m[2].numero)))
+				||
+				((m[1].numero==((m[2].numero))
+				&& m[2].numero==((m[3].numero))))
+				||
+				((m[2].numero==(m[3].numero)
+				&& m[3].numero==(m[4].numero)))
+				||
+				((m[3].numero==(m[4].numero)
+				&& m[4].numero==(m[5].numero)))
+				||
+				((m[4].numero==(m[5].numero)
+				&& m[5].numero==(m[6].numero)))
+		){//Si hay un trio pasara a mirar si hay un full house
+			if(((m[0].numero==(m[1].numero)//1
+				&& m[1].numero==(m[2].numero)))){
+					if(m[3].numero==(m[4].numero)
+						||m[4].numero==(m[5].numero)
+						||m[5].numero==(m[6].numero))
+					{
+						return 3;
+					}
+			}else if(((m[1].numero==(m[2].numero)//2
+					&& m[2].numero==(m[3].numero)))){
+						if(m[4].numero==(m[5].numero)
+							||m[5].numero==(m[6].numero))
+						{
+							return 3;
+						}
+			}else if(((m[2].numero==(m[3].numero)//3
+					&& m[3].numero==(m[4].numero)))){
+						if(m[5].numero==(m[6].numero)
+								||m[0].numero==(m[1].numero))
+						{
+							return 3;
+						}
+			}else if(((m[3].numero==(m[4].numero)//4
+					&& m[4].numero==(m[5].numero)))){
+						if(m[0].numero==(m[1].numero)
+								||m[1].numero==(m[2].numero))
+						{
+							return 3;
+						}
+			}else if(((m[4].numero==(m[5].numero)//4
+					&& m[5].numero==(m[6].numero)))){
+						if(m[0].numero==(m[1].numero)
+								||m[1].numero==(m[2].numero)
+								||m[2].numero==(m[3].numero))
+						{
+							return 3;
+						}
+			}
+			
+		}else if(cuentaColor>=4){
+			return 4;
+		}else if(cuentaEscaleraNormal>=4){
+			return 5;
+		}
+		
+		return 10;
 		
 	}
 }
