@@ -33,12 +33,53 @@ public class Calculate {
 			HeadsUp.win1text("100% -> " + rankingmano1 + " < " +rankingmano2 + " ----- " + orden1);
 			HeadsUp.win2text("0%");
 			
-		}else if(rankingmano1==rankingmano2){
-			HeadsUp.win1text("Empate -> "+ rankingmano1 + " // " +rankingmano2+ " ----- " + orden1);
-			HeadsUp.win2text("Empate");
-		}else{
+		}else if(rankingmano1>rankingmano2){
 			HeadsUp.win1text("0% -> "+ rankingmano1 + " // " +rankingmano2+ " ----- " + orden1);
 			HeadsUp.win2text("100%");
+		}else{
+			if(rankingmano1==1){
+				if(empate1(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate1(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
+			}else if(rankingmano1==2){
+				if(empate2(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate2(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
+			}else if(rankingmano1==3){
+				
+			}else if(rankingmano1==4){
+				
+			}else if(rankingmano1==5){
+				
+			}else if(rankingmano1==6){
+				
+			}else if(rankingmano1==7){
+				
+			}else if(rankingmano1==8){
+				
+			}else if(rankingmano1==9){
+				
+			}
 		}
 		
 		/*	
@@ -106,6 +147,7 @@ public class Calculate {
 		return m;
 	}
 	public int ranking(carta[] m){
+
 		
 		boolean trio = false;
 		
@@ -486,5 +528,202 @@ public class Calculate {
 		cuentaEscaleraNormal = 0;
 		return 9;
 		
+	}
+	public int empate1(carta[] m1, carta[] m2){
+		int ultimovalor1 = 0;
+		int cuentaEscColor1 = 0;
+		for(int i=0;i<7;i++){
+			if(m1[0].numero==m1[i].numero-(cuentaEscColor1+1)
+			   && m1[0].palo == m1[i].palo){
+				
+				cuentaEscColor1++;
+				ultimovalor1 = m1[i].numero;
+			}
+		}
+		if(cuentaEscColor1<4){
+			cuentaEscColor1=0;
+			for(int i=0;i<7;i++){
+				if(m1[1].numero==m1[i].numero-(cuentaEscColor1+1)
+				   && m1[1].palo == m1[i].palo){
+					
+					cuentaEscColor1++;
+					ultimovalor1 = m1[i].numero;
+					
+				}
+			}
+		}
+		if(cuentaEscColor1<4){
+			cuentaEscColor1=0;
+			for(int i=0;i<7;i++){
+				if(m1[2].numero==m1[i].numero-(cuentaEscColor1+1)
+				   && m1[2].palo == m1[i].palo){
+					
+					cuentaEscColor1++;
+					ultimovalor1 = m1[i].numero;
+					
+				}
+			}
+		}
+		////////////////////////////////////////////////////////
+		int ultimovalor2 = 0;
+		int cuentaEscColor2 = 0;
+		for(int i=0;i<7;i++){
+			if(m2[0].numero==m2[i].numero-(cuentaEscColor2+1)
+			   && m2[0].palo == m2[i].palo){
+				
+				cuentaEscColor2++;
+				ultimovalor2 = m2[i].numero;
+			}
+		}
+		if(cuentaEscColor2<4){
+			cuentaEscColor2=0;
+			for(int i=0;i<7;i++){
+				if(m2[1].numero==m2[i].numero-(cuentaEscColor2+1)
+				   && m2[1].palo == m2[i].palo){
+					
+					cuentaEscColor2++;
+					ultimovalor2 = m2[i].numero;
+					
+				}
+			}
+		}
+		if(cuentaEscColor2<4){
+			cuentaEscColor2=0;
+			for(int i=0;i<7;i++){
+				if(m2[2].numero==m2[i].numero-(cuentaEscColor2+1)
+				   && m2[2].palo == m2[i].palo){
+					
+					cuentaEscColor2++;
+					ultimovalor2 = m2[i].numero;
+					
+				}
+			}
+		}
+		if(ultimovalor1>ultimovalor2){
+			return 1;
+		}else if(ultimovalor1<ultimovalor2){
+			return 2;
+		}else{
+			return 0;
+		}
+	}
+	public int empate2(carta[] m1, carta[] m2){
+		if(m1[3].numero>m2[3].numero){
+			return 1;
+		}else if(m1[3].numero<m2[3].numero){
+			return 2;
+		}else{
+			if(m1[6].numero>m2[6].numero
+				&& m1[6].numero!=m1[3].numero	){
+				return 1;
+			}else if(m1[6].numero<m2[6].numero
+				&& m2[6].numero!=m1[3].numero	){
+				return 2;
+			}else if(m1[6].numero==m2[6].numero
+				&& m2[6].numero!=m1[3].numero	){
+				return 0;
+			}
+			
+			if(m1[5].numero>m2[5].numero
+				&& m1[5].numero!=m1[3].numero	){
+				return 1;
+			}else if(m1[5].numero<m2[5].numero
+				&& m2[5].numero!=m1[3].numero	){
+				return 2;
+			}else if(m1[5].numero==m2[5].numero
+				&& m1[5].numero!=m1[3].numero	){
+				return 0;
+			}
+			
+			if(m1[4].numero>m2[4].numero
+				&& m1[4].numero!=m1[3].numero	){
+				return 1;
+			}else if(m1[4].numero<m2[4].numero
+				&& m2[4].numero!=m1[3].numero	){
+				return 2;
+			}else if(m1[4].numero==m2[4].numero
+				&& m1[4].numero!=m1[3].numero	){
+				return 0;
+			}
+			
+			if(m1[2].numero>m2[2].numero
+				&& m1[2].numero!=m1[3].numero	){
+				return 1;
+			}else if(m1[2].numero<m2[2].numero
+				&& m2[2].numero!=m1[3].numero	){
+				return 2;
+			}else if(m1[2].numero==m2[2].numero
+				&& m1[2].numero!=m1[3].numero	){
+				return 0;
+			}//solo hasta m1[2] porque sera la unica relevante(la mayor) cuando el poker sea de cartas superiores
+			else{
+				return 0; 
+			}
+			
+		}
+		
+	}
+	public int empate3(carta[] m1, carta[] m2){
+		int valorTrio1=0;
+		int valorTrio2=0;
+		int valorPar1=0;
+		int valorPar2=0;
+		if(
+			((m1[0].numero==(m1[1].numero)//Cambiar a sentido contrario para calcular primero trio alto (?)
+			&& m1[1].numero==(m1[2].numero)))
+			||
+			((m1[1].numero==((m1[2].numero))
+			&& m1[2].numero==((m1[3].numero))))
+			||
+			((m1[2].numero==(m1[3].numero)
+			&& m1[3].numero==(m1[4].numero)))
+		){
+				
+			valorTrio1 = m1[2].numero;
+		}else if(
+			((m1[3].numero==(m1[4].numero)
+			&& m1[4].numero==(m1[5].numero)))
+			||
+			((m1[4].numero==(m1[5].numero)
+			&& m1[5].numero==(m1[6].numero)))
+		){
+			valorTrio1 = m1[4].numero;
+		}
+		
+		if(
+			((m2[0].numero==(m2[1].numero)
+			&& m2[1].numero==(m2[2].numero)))
+			||
+			((m2[1].numero==((m2[2].numero))
+			&& m2[2].numero==((m2[3].numero))))
+			||
+			((m2[2].numero==(m2[3].numero)
+			&& m2[3].numero==(m2[4].numero)))
+		){
+				
+			valorTrio2 = m2[2].numero;
+		}else if(
+			((m2[3].numero==(m2[4].numero)
+			&& m2[4].numero==(m2[5].numero)))
+			||
+			((m2[4].numero==(m2[5].numero)
+			&& m2[5].numero==(m2[6].numero)))
+		){
+			valorTrio2 = m2[4].numero;
+		}
+		
+		if(valorTrio1>valorTrio2){
+			return 1;
+		}else if(valorTrio1<valorTrio2){
+			return 2;
+		}else{
+			if ((m1[6].numero==m1[5].numero
+				||m1[5].numero==m1[4].numero)
+				&&m1[5].numero!=valorTrio1){
+				valorPar1=m1[5].numero;
+			}
+			//[...]
+			
+		}
 	}
 }

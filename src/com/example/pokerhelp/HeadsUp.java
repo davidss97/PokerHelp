@@ -74,8 +74,8 @@ public class HeadsUp extends Activity{
 	      
 	      progreso = (ProgressBar)findViewById(R.id.progreso);
 	      
-	      F1 = new carta(1,14);
-		  flop1.setBackgroundResource(R.drawable.cardspadesa);
+	      F1 = new carta(2,8);
+		  flop1.setBackgroundResource(R.drawable.cardclubs8);
 		  F2 = new carta(1,7);
 		  flop2.setBackgroundResource(R.drawable.cardspades7);
 		  F3 = new carta(1,8);
