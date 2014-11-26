@@ -66,6 +66,19 @@ public class Calculate {
 					HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==3){
+				if(empate3(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate3(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
 				
 			}else if(rankingmano1==4){
 				
@@ -669,47 +682,48 @@ public class Calculate {
 		int valorPar1=0;
 		int valorPar2=0;
 		if(
-			((m1[0].numero==(m1[1].numero)//Cambiar a sentido contrario para calcular primero trio alto (?)
-			&& m1[1].numero==(m1[2].numero)))
-			||
-			((m1[1].numero==((m1[2].numero))
-			&& m1[2].numero==((m1[3].numero))))
-			||
 			((m1[2].numero==(m1[3].numero)
 			&& m1[3].numero==(m1[4].numero)))
-		){
-				
-			valorTrio1 = m1[2].numero;
-		}else if(
+			||
 			((m1[3].numero==(m1[4].numero)
 			&& m1[4].numero==(m1[5].numero)))
 			||
 			((m1[4].numero==(m1[5].numero)
 			&& m1[5].numero==(m1[6].numero)))
+			
 		){
+				
 			valorTrio1 = m1[4].numero;
+		}else if(
+			((m1[0].numero==(m1[1].numero)//Cambiar a sentido contrario para calcular primero trio alto (?)
+			&& m1[1].numero==(m1[2].numero)))
+			||
+			((m1[1].numero==((m1[2].numero))
+			&& m1[2].numero==((m1[3].numero))))
+		){
+			valorTrio1 = m1[2].numero;
 		}
 		
 		if(
-			((m2[0].numero==(m2[1].numero)
-			&& m2[1].numero==(m2[2].numero)))
-			||
-			((m2[1].numero==((m2[2].numero))
-			&& m2[2].numero==((m2[3].numero))))
-			||
 			((m2[2].numero==(m2[3].numero)
 			&& m2[3].numero==(m2[4].numero)))
-		){
-				
-			valorTrio2 = m2[2].numero;
-		}else if(
+			||
 			((m2[3].numero==(m2[4].numero)
 			&& m2[4].numero==(m2[5].numero)))
 			||
 			((m2[4].numero==(m2[5].numero)
 			&& m2[5].numero==(m2[6].numero)))
 		){
+				
 			valorTrio2 = m2[4].numero;
+		}else if(
+			((m2[0].numero==(m2[1].numero)
+			&& m2[1].numero==(m2[2].numero)))
+			||
+			((m2[1].numero==((m2[2].numero))
+			&& m2[2].numero==((m2[3].numero))))
+		){
+			valorTrio2 = m2[2].numero;
 		}
 		
 		if(valorTrio1>valorTrio2){
@@ -721,7 +735,24 @@ public class Calculate {
 				||m1[5].numero==m1[4].numero)
 				&&m1[5].numero!=valorTrio1){
 				valorPar1=m1[5].numero;
+			}else if ((m1[4].numero==m1[3].numero
+				||m1[3].numero==m1[2].numero)
+				&&m1[3].numero!=valorTrio1){
+				valorPar1=m1[3].numero;
 			}
+			else if ((m1[2].numero==m1[1].numero
+				||m1[1].numero==m1[0].numero)
+				&&m1[1].numero!=valorTrio1){
+				valorPar1=m1[1].numero;
+			}
+			if(valorPar1>valorPar2){
+				return 1;
+			}else if(valorPar1<valorPar2){
+				return 2;
+			}else{
+				return 0;
+			}
+			
 			//[...]
 			
 		}
