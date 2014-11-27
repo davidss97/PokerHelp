@@ -79,13 +79,48 @@ public class Calculate {
 					HeadsUp.win1text("50%");
 					HeadsUp.win2text("50%");
 				}
-				
 			}else if(rankingmano1==4){
-				
+				if(empate4(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate4(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
 			}else if(rankingmano1==5){
-				
+				if(empate5(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate5(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
 			}else if(rankingmano1==6){
-				
+				if(empate6(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate6(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
 			}else if(rankingmano1==7){
 				
 			}else if(rankingmano1==8){
@@ -756,5 +791,286 @@ public class Calculate {
 			//[...]
 			
 		}
+	}
+	public int empate4(carta[] m1, carta[] m2){
+		int[] ultimovalor1 = new int[]{0,0,0,0,0,0,0};
+		int cuentaColor1 = 0;
+		for(int i=0;i<7;i++){
+			if(m1[0].palo == m1[i].palo){
+				cuentaColor1++;
+				ultimovalor1[cuentaColor1] = m1[i].numero;
+			}
+		}
+		if(cuentaColor1<4){
+			cuentaColor1=0;
+			ultimovalor1 = new int[]{0,0,0,0,0,0,0};
+			for(int i=0;i<7;i++){
+				if(m1[1].palo == m1[i].palo){
+					
+					cuentaColor1++;
+					ultimovalor1[cuentaColor1] = m1[i].numero;
+					
+				}
+			}
+		}
+		if(cuentaColor1<4){
+			cuentaColor1=0;
+			ultimovalor1 = new int[]{0,0,0,0,0,0,0};
+			for(int i=0;i<7;i++){
+				if(m1[2].palo == m1[i].palo){
+					
+					cuentaColor1++;
+					ultimovalor1[cuentaColor1] = m1[i].numero;
+					
+				}
+			}
+		}
+		////////////////////////////////////////////////////////
+		int[] ultimovalor2 = new int[]{0,0,0,0,0,0,0};
+		int cuentaColor2 = 0;
+		for(int i=0;i<7;i++){
+			if(m2[0].palo == m2[i].palo){
+				
+				cuentaColor2++;
+				ultimovalor2[cuentaColor2] = m2[i].numero;
+			}
+		}
+		if(cuentaColor2<4){
+			cuentaColor2=0;
+			ultimovalor2 = new int[]{0,0,0,0,0,0,0};
+			for(int i=0;i<7;i++){
+				if(m2[1].palo == m2[i].palo){
+					
+					cuentaColor2++;
+					ultimovalor2[cuentaColor2] = m2[i].numero;
+					
+				}
+			}
+		}
+		if(cuentaColor2<4){
+			cuentaColor2=0;
+			ultimovalor2 = new int[]{0,0,0,0,0,0,0};
+			for(int i=0;i<7;i++){
+				if(m2[2].palo == m2[i].palo){
+					
+					cuentaColor2++;
+					ultimovalor2[cuentaColor2] = m2[i].numero;
+					
+				}
+			}
+		}
+		if(ultimovalor1[cuentaColor1]>ultimovalor2[cuentaColor2]){
+			return 1;
+		}else if(ultimovalor2[cuentaColor2]>ultimovalor1[cuentaColor1]){
+			return 2;
+		}else if(ultimovalor1[cuentaColor1-1]>ultimovalor2[cuentaColor2-1]){
+			return 1;
+		}else if(ultimovalor2[cuentaColor2-1]>ultimovalor1[cuentaColor1-1]){
+			return 2;
+		}else if(ultimovalor1[cuentaColor1-2]>ultimovalor2[cuentaColor2-2]){
+			return 1;
+		}else if(ultimovalor2[cuentaColor2-2]>ultimovalor1[cuentaColor1-2]){
+			return 2;
+		}else if(ultimovalor1[cuentaColor1-3]>ultimovalor2[cuentaColor2-3]){
+			return 1;
+		}else if(ultimovalor2[cuentaColor2-3]>ultimovalor1[cuentaColor1-3]){
+			return 2;
+		}else if(ultimovalor1[cuentaColor1-4]>ultimovalor2[cuentaColor2-4]){
+			return 1;
+		}else if(ultimovalor2[cuentaColor2-4]>ultimovalor1[cuentaColor1-4]){
+			return 2;
+		}else{
+			return 0;
+		}
+		
+	}
+	public int empate5(carta[] m1, carta[] m2){
+		int ultimovalor1 = 0;
+		int cuentaEsc1 = 0;
+		for(int i=0;i<7;i++){
+			if(m1[0].numero==m1[i].numero-(cuentaEsc1+1)){
+				
+				cuentaEsc1++;
+				ultimovalor1 = m1[i].numero;
+			}
+		}
+		if(cuentaEsc1<4){
+			cuentaEsc1=0;
+			for(int i=0;i<7;i++){
+				if(m1[1].numero==m1[i].numero-(cuentaEsc1+1)){
+					
+					cuentaEsc1++;
+					ultimovalor1 = m1[i].numero;
+					
+				}
+			}
+		}
+		if(cuentaEsc1<4){
+			cuentaEsc1=0;
+			for(int i=0;i<7;i++){
+				if(m1[2].numero==m1[i].numero-(cuentaEsc1+1)){
+					
+					cuentaEsc1++;
+					ultimovalor1 = m1[i].numero;
+					
+				}
+			}
+		}
+		////////////////////////////////////////////////////////
+		int ultimovalor2 = 0;
+		int cuentaEsc2 = 0;
+		for(int i=0;i<7;i++){
+			if(m2[0].numero==m2[i].numero-(cuentaEsc2+1)){
+				
+				cuentaEsc2++;
+				ultimovalor2 = m2[i].numero;
+			}
+		}
+		if(cuentaEsc2<4){
+			cuentaEsc2=0;
+			for(int i=0;i<7;i++){
+				if(m2[1].numero==m2[i].numero-(cuentaEsc2+1)){
+					
+					cuentaEsc2++;
+					ultimovalor2 = m2[i].numero;
+					
+				}
+			}
+		}
+		if(cuentaEsc2<4){
+			cuentaEsc2=0;
+			for(int i=0;i<7;i++){
+				if(m2[2].numero==m2[i].numero-(cuentaEsc2+1)){
+					
+					cuentaEsc2++;
+					ultimovalor2 = m2[i].numero;
+					
+				}
+			}
+		}
+		if(ultimovalor1>ultimovalor2){
+			return 1;
+		}else if(ultimovalor1<ultimovalor2){
+			return 2;
+		}else{
+			return 0;
+		}
+	}
+	public int empate6(carta[] m1, carta[] m2){
+		int valorTrio1=0;
+		int altasIguales = 0;
+		if(
+			((m1[2].numero==(m1[3].numero)
+			&& m1[3].numero==(m1[4].numero)))
+			||
+			((m1[3].numero==(m1[4].numero)
+			&& m1[4].numero==(m1[5].numero)))
+			||
+			((m1[4].numero==(m1[5].numero)
+			&& m1[5].numero==(m1[6].numero)))
+			
+		){
+				
+			valorTrio1 = m1[4].numero;
+		}else if(
+			((m1[0].numero==(m1[1].numero)//Cambiar a sentido contrario para calcular primero trio alto (?)
+			&& m1[1].numero==(m1[2].numero)))
+			||
+			((m1[1].numero==((m1[2].numero))
+			&& m1[2].numero==((m1[3].numero))))
+		){
+			valorTrio1 = m1[2].numero;
+		}
+		
+		int valorTrio2=0;		
+		if(
+			((m2[2].numero==(m2[3].numero)
+			&& m2[3].numero==(m2[4].numero)))
+			||
+			((m2[3].numero==(m2[4].numero)
+			&& m2[4].numero==(m2[5].numero)))
+			||
+			((m2[4].numero==(m2[5].numero)
+			&& m2[5].numero==(m2[6].numero)))
+		){
+				
+			valorTrio2 = m2[4].numero;
+		}else if(
+			((m2[0].numero==(m2[1].numero)
+			&& m2[1].numero==(m2[2].numero)))
+			||
+			((m2[1].numero==((m2[2].numero))
+			&& m2[2].numero==((m2[3].numero))))
+		){
+			valorTrio2 = m2[2].numero;
+		}
+		
+		
+		if(valorTrio1>valorTrio2){
+			return 1;
+		}else if(valorTrio1<valorTrio2){
+			return 2;
+		}else{
+			if(m1[6].numero > m2[6].numero
+				&& m1[6].numero != valorTrio1){
+				return 1;
+			}else if(m1[6].numero < m2[6].numero
+				&& m2[6].numero != valorTrio2){
+				return 2;
+			}else if(m1[6].numero == m2[6].numero
+				&& m1[6].numero != valorTrio1){
+				altasIguales++;
+			}else if(m1[5].numero > m2[5].numero
+				&& m1[5].numero != valorTrio1){
+				return 1;
+			}else if(m1[5].numero < m2[5].numero
+				&& m2[5].numero != valorTrio2){
+				return 2;
+			}else if(m1[5].numero == m2[5].numero
+				&& m1[5].numero != valorTrio1){
+				altasIguales++;
+			}
+			
+			if(altasIguales == 2){
+				return 0;
+			}else if(m1[4].numero > m2[4].numero
+				&& m1[4].numero != valorTrio1){
+				return 1;
+			}else if(m1[4].numero < m2[4].numero
+				&& m2[4].numero != valorTrio2){
+				return 2;
+			}else if(m1[4].numero == m2[4].numero
+				&& m1[4].numero != valorTrio1){
+				altasIguales++;
+			}
+			
+			if(altasIguales == 2){
+				return 0;
+			}else if(m1[3].numero > m2[3].numero
+				&& m1[3].numero != valorTrio1){
+				return 1;
+			}else if(m1[3].numero < m2[3].numero
+				&& m2[3].numero != valorTrio2){
+				return 2;
+			}else if(m1[3].numero == m2[3].numero
+				&& m1[3].numero != valorTrio1){
+				altasIguales++;
+			}
+			
+			if(altasIguales == 2){
+				return 0;
+			}else if(m1[2].numero > m2[2].numero
+				&& m1[2].numero != valorTrio1){
+				return 1;
+			}else if(m1[2].numero < m2[2].numero
+				&& m2[2].numero != valorTrio2){
+				return 2;
+			}
+			
+			return 0;
+		}
+	}
+	public int empate7(carta[] m1, carta[] m2){
+		return 0;
 	}
 }
