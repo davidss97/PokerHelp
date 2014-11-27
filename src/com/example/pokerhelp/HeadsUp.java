@@ -82,8 +82,8 @@ public class HeadsUp extends Activity{
 		  flop3.setBackgroundResource(R.drawable.cardspades8);
 		  F4 = new carta(1,9);
 		  turn.setBackgroundResource(R.drawable.cardspades9);
-		  F5 = new carta(2,7);
-		  river.setBackgroundResource(R.drawable.cardclubs7);
+		  F5 = new carta(3,12);
+		  river.setBackgroundResource(R.drawable.cardheartsq);
 	      
 	      GO = (Button)findViewById(R.id.go);
 	      

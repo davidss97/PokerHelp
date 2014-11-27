@@ -122,11 +122,47 @@ public class Calculate {
 					HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==7){
-				
+				if(empate7(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate7(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
 			}else if(rankingmano1==8){
-				
+				if(empate8(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate8(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
 			}else if(rankingmano1==9){
-				
+				if(empate9(m1,m2)==1){
+					//Ganador mano1
+					HeadsUp.win1text("100%");
+					HeadsUp.win2text("0%");
+				}else if(empate9(m1,m2)==2){
+					//Ganador mano2
+					HeadsUp.win1text("0%");
+					HeadsUp.win2text("100%");
+				}else{
+					//Empate
+					HeadsUp.win1text("50%");
+					HeadsUp.win2text("50%");
+				}
 			}
 		}
 		
@@ -1071,6 +1107,263 @@ public class Calculate {
 		}
 	}
 	public int empate7(carta[] m1, carta[] m2){
-		return 0;
+		int contadorAltas = 0;
+		int valorPar11=0;
+		int valorPar12=0;
+		int valorPar21=0;
+		int valorPar22=0;
+		
+		if ((m1[6].numero==m1[5].numero
+			||m1[5].numero==m1[4].numero)){
+			valorPar11=m1[5].numero;
+		}if ((m1[4].numero==m1[3].numero
+			||m1[3].numero==m1[2].numero)){
+			if(valorPar11==0){
+				valorPar11=m1[3].numero;
+			}else{
+				valorPar12=m1[3].numero;
+			}
+		}if ((m1[2].numero==m1[1].numero
+			||m1[1].numero==m1[0].numero)){
+			if(valorPar11==0){
+				valorPar11=m1[1].numero;
+			}else if (valorPar12==0){
+				valorPar12=m1[1].numero;
+			}
+		}
+		
+		if ((m2[6].numero==m2[5].numero
+				||m2[5].numero==m2[4].numero)){
+				valorPar21=m2[5].numero;
+		}if ((m2[4].numero==m2[3].numero
+			||m2[3].numero==m2[2].numero)){
+			if(valorPar21==0){
+				valorPar21=m2[3].numero;
+			}else{
+				valorPar22=m2[3].numero;
+			}
+		}if ((m2[2].numero==m2[1].numero
+			||m2[1].numero==m2[0].numero)){
+			if(valorPar21==0){
+				valorPar21=m2[1].numero;
+			}else if (valorPar22==0){
+				valorPar22=m2[1].numero;
+			}
+		}
+		
+		if(valorPar11>valorPar21){
+			return 1;
+		}else if(valorPar11<valorPar21){
+			return 2;
+		}else if(valorPar12>valorPar22){
+			return 1;
+		}else if(valorPar12<valorPar22){
+			return 2;
+		}else{
+			if(m1[6].numero>m2[6].numero
+				&& m1[6].numero != valorPar11
+				&& m1[6].numero != valorPar12){
+				return 1;
+			}else if(m1[6].numero<m2[6].numero
+				&& m2[6].numero != valorPar21
+				&& m2[6].numero != valorPar22){
+				return 2;
+			}else if(m1[6].numero==m2[6].numero
+				&& m2[6].numero != valorPar21
+				&& m2[6].numero != valorPar22){
+				contadorAltas++;
+			}
+			
+			if(contadorAltas==1){
+		    	return 0;
+		    }else if(m1[5].numero>m2[5].numero
+				&& m1[5].numero != valorPar11
+				&& m1[5].numero != valorPar12){
+				return 1;
+			}else if(m1[5].numero<m2[5].numero
+				&& m2[5].numero != valorPar21
+				&& m2[5].numero != valorPar22){
+				return 2;
+			}else if(m1[5].numero==m2[5].numero
+				&& m2[5].numero != valorPar21
+				&& m2[5].numero != valorPar22){
+				contadorAltas++;
+			}
+			
+		    if(contadorAltas==1){
+		    	return 0;
+		    }else if(m1[4].numero>m2[4].numero
+				&& m1[4].numero != valorPar11
+				&& m1[4].numero != valorPar12){
+				return 1;
+			}else if(m1[4].numero<m2[4].numero
+				&& m2[4].numero != valorPar21
+				&& m2[4].numero != valorPar22){
+				return 2;
+			}else if(m1[4].numero==m2[4].numero
+				&& m2[4].numero != valorPar21
+				&& m2[4].numero != valorPar22){
+				contadorAltas++;
+			}
+			
+		    if(contadorAltas==1){
+		    	return 0;
+		    }else if(m1[3].numero>m2[3].numero
+				&& m1[3].numero != valorPar11
+				&& m1[3].numero != valorPar12){
+				return 1;
+			}else if(m1[3].numero<m2[3].numero
+				&& m2[3].numero != valorPar21
+				&& m2[3].numero != valorPar22){
+				return 2;
+			}else if(m1[3].numero==m2[3].numero
+				&& m2[3].numero != valorPar21
+				&& m2[3].numero != valorPar22){
+				contadorAltas++;
+			}
+		    
+		    if(contadorAltas==1){
+		    	return 0;
+		    }else if(m1[2].numero>m2[2].numero
+				&& m1[2].numero != valorPar11
+				&& m1[2].numero != valorPar12){
+				return 1;
+			}else if(m1[2].numero<m2[2].numero
+				&& m2[2].numero != valorPar21
+				&& m2[2].numero != valorPar22){
+				return 2;
+			}else if(m1[2].numero==m2[2].numero
+				&& m2[2].numero != valorPar21
+				&& m2[2].numero != valorPar22){
+				contadorAltas++;
+			}
+		    
+		    return 0;
+		}
+	}
+	public int empate8(carta[] m1, carta[] m2){
+		int contadorAltas = 0;
+		int valorPar1=0;
+		int valorPar2=0;
+		
+		if ((m1[6].numero==m1[5].numero
+			||m1[5].numero==m1[4].numero)){
+			valorPar1=m1[5].numero;
+		}else if ((m1[4].numero==m1[3].numero
+			||m1[3].numero==m1[2].numero)){
+			valorPar1=m1[3].numero;
+		}
+		else if ((m1[2].numero==m1[1].numero
+			||m1[1].numero==m1[0].numero)){
+			valorPar1=m1[1].numero;
+		}
+		
+		if ((m2[6].numero==m2[5].numero
+			||m2[5].numero==m2[4].numero)){
+			valorPar2=m2[5].numero;
+		}else if ((m2[4].numero==m2[3].numero
+			||m2[3].numero==m2[2].numero)){
+			valorPar2=m2[3].numero;
+		}
+		else if ((m2[2].numero==m2[1].numero
+			||m2[1].numero==m2[0].numero)){
+			valorPar2=m2[1].numero;
+		}
+		
+		if(valorPar1>valorPar2){
+			return 1;
+		}else if(valorPar1<valorPar2){
+			return 2;
+		}else{
+			if(m1[6].numero>m2[6].numero
+				&& m1[6].numero != valorPar1){
+				return 1;
+			}else if(m1[6].numero<m2[6].numero
+				&& m2[6].numero != valorPar2){
+				return 2;
+			}else if(m1[6].numero==m2[6].numero
+				&& m2[6].numero != valorPar2){
+				contadorAltas++;
+			}
+			
+			if(m1[5].numero>m2[5].numero
+				&& m1[5].numero != valorPar1){
+				return 1;
+			}else if(m1[5].numero<m2[5].numero
+				&& m2[5].numero != valorPar2){
+				return 2;
+			}else if(m1[5].numero==m2[5].numero
+				&& m2[5].numero != valorPar2){
+				contadorAltas++;
+			}
+			
+		    if(contadorAltas==3){
+		    	return 0;
+		    }else if(m1[4].numero>m2[4].numero
+				&& m1[4].numero != valorPar1){
+				return 1;
+			}else if(m1[4].numero<m2[4].numero
+				&& m2[4].numero != valorPar2){
+				return 2;
+			}else if(m1[4].numero==m2[4].numero
+				&& m2[4].numero != valorPar2){
+				contadorAltas++;
+			}
+			
+		    if(contadorAltas==3){
+		    	return 0;
+		    }else if(m1[3].numero>m2[3].numero
+				&& m1[3].numero != valorPar1){
+				return 1;
+			}else if(m1[3].numero<m2[3].numero
+				&& m2[3].numero != valorPar2){
+				return 2;
+			}else if(m1[3].numero==m2[3].numero
+				&& m2[3].numero != valorPar2){
+				contadorAltas++;
+			}
+		    
+		    if(contadorAltas==3){
+		    	return 0;
+		    }else if(m1[2].numero>m2[2].numero
+				&& m1[2].numero != valorPar1){
+				return 1;
+			}else if(m1[2].numero<m2[2].numero
+				&& m2[2].numero != valorPar2){
+				return 2;
+			}else if(m1[2].numero==m2[2].numero
+				&& m2[2].numero != valorPar2){
+				contadorAltas++;
+			}
+		    
+		    return 0;
+		}
+	}
+	public int empate9(carta[] m1, carta[] m2){
+		if(m1[6].numero>m2[6].numero){
+			return 1;
+		}else if(m1[6].numero<m2[6].numero){
+			return 2;
+		}else if(m1[5].numero>m2[5].numero){
+			return 1;
+		}else if(m1[5].numero<m2[5].numero){
+			return 2;
+		}else if(m1[4].numero>m2[4].numero){
+			return 1;
+		}else if(m1[4].numero<m2[4].numero){
+			return 2;
+		}else if(m1[3].numero>m2[3].numero){
+			return 1;
+		}else if(m1[3].numero<m2[3].numero){
+			return 2;
+		}else if(m1[2].numero>m2[2].numero){
+			return 1;
+		}else if(m1[2].numero<m2[2].numero){
+			return 2;
+		}else {
+			return 0;
+		}
+	    
+	   
 	}
 }
