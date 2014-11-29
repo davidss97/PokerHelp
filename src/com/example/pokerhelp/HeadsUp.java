@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 
@@ -24,6 +25,12 @@ public class HeadsUp extends Activity{
 	
 	Button GO;
 	Button atras;
+	
+	static int gana1 = 0;
+    static int gana2 = 0;
+    static int empate = 0;
+    static long total = 0;
+	
 	public static TextView win1;
 	public static TextView lose1;
 	public static TextView split1;
@@ -92,14 +99,111 @@ public class HeadsUp extends Activity{
 	    	  public void onClick(View arg0) {
 	    		  //1 picas || 2 trevoles || 3 corazones || 4 diamantes
 	    		  
+	    		  carta[] Baraja = new carta[48];
+	    		  int contadorBaraja = 0;
+	    		  for(int i=1;i<5;i++){
+	    			  for(int n=2; n<15 ; n++){
+	    				  if(new carta(i,n).numero==C1.numero
+	    					 && new carta(i,n).palo==C1.palo
+	    					 || new carta(i,n).numero==C2.numero
+	    					 && new carta(i,n).palo==C2.palo
+	    					 || new carta(i,n).numero==X1.numero
+	    					 && new carta(i,n).palo==X1.palo
+	    					 || new carta(i,n).numero==X2.numero
+	    					 && new carta(i,n).palo==X2.palo){
+	    				  }else{
+	    					  Baraja[contadorBaraja] = new carta(i,n);
+		    					 contadorBaraja++;
+	    				  }
+	    			  }
+	    		  }
 	    		  
 	    		  
+	    		  /*for(int n1=0;n1<48;n1++){
+	    			  for(int n2=0;n2<48;n2++){
+		    			  if(n2 != n1){
+		    				  for(int n3=0;n3<48;n3++){
+				    			  if(n3 != n2 && n3 != n1){
+				    				  for(int n4=0;n4<48;n4++){
+						    			  if(n4 != n3 && n4 != n2 && n4 != n1){
+						    				  for(int n5=0;n5<48;n5++){
+								    			  if(n5 != n4 && n5 != n3 && n5 != n2 && n5 != n1){
+								    				  
+								    				 // carta[] mano1 = {C1,C2,F1,F2,F3,F4,F5};
+								    	    		 // carta[] mano2 = {X1,X2,F1,F2,F3,F4,F5};
+								    	    		  
+								    	    		  
+								    	    		  //Toast.makeText(getApplicationContext(), mano1.length + " <-- cantidad cartas", Toast.LENGTH_LONG).show();
+								    	    		  
+								    	    		  //new Calculate(mano1, mano2);
+								    				  total++;
+								    				  if(total >= 10000000){break;}
+								    			  }
+							    			  }
+						    			  }
+					    			  }
+				    			  }
+			    			  }
+		    			  }
+		    		  }
+	    		  }*/
 	    		  
-	    		  carta[] mano1 = {C1,C2,F1,F2,F3,F4,F5};
+	    		  for ( int i = 0; i < 48; i++ ) {
+	    		        for ( int j = i + 1; j < 48; j++ ) {
+	    		            for ( int k = j + 1; k < 48; k++ ) {
+	    		                for (int l = k + 1; l < 48; l++) {
+	    		                    for (int m = l + 1; m < 48; m++) {
+	    		                    	carta[] mano1 = {C1,C2,Baraja[i],Baraja[j],Baraja[k],Baraja[l],Baraja[m]};
+					    	    		carta[] mano2 = {X1,X2,Baraja[i],Baraja[j],Baraja[k],Baraja[l],Baraja[m]};
+					    	    		
+					    	    		//carta[] mano1 = {C1,C2,F1,F2,F3,F4,F5};
+					  	    		  	//carta[] mano2 = {X1,X2,F1,F2,F3,F4,F5};
+					    	    		
+					    	    		total++;
+					    	    		
+					    	    		int rr = new Calculate().Calculator(mano1, mano2);
+					    	    		if(rr==1){gana1++;
+					    	    		}else if(rr==2){gana2++;
+					    	    		}else if(rr==0){empate++;
+					    	    		}
+	    		                    }
+	    		                }
+	    		            }
+	    		        }
+	    		    }
+	    		  
+	    		  long porc1 =  gana1*100/total;
+	    		  long porc2 =  gana2*100/total;
+	    		  long empate1 =  empate*100/total;
+	    		  
+	    		  win1text( Long.toString(porc1) +"% win" );
+	    		  win2text( Long.toString(porc2) +"% win");
+	    		  lose1text( Long.toString(porc2) +"% lose");
+	    		  lose2text( Long.toString(porc1) +"% lose");
+	    		  split1text( Long.toString(empate1) +"% split");
+	    		  split2text( Long.toString(empate1) +"% split");
+	    		  
+	    		  //win1text(porc1 +"% win");
+	    		  
+	    		  
+	    		  Toast.makeText(getApplicationContext(), gana1 + " <-- gana la mano 1", Toast.LENGTH_SHORT).show();
+	    		  Toast.makeText(getApplicationContext(), gana2 + " <-- gana la mano 2", Toast.LENGTH_SHORT).show();
+	    		  Toast.makeText(getApplicationContext(), empate + " <-- empates", Toast.LENGTH_SHORT).show();
+	    		  
+	    		  Toast.makeText(getApplicationContext(), total + " total hands analized", Toast.LENGTH_LONG).show();
+	    		  total = 0;
+	    		  gana1=0;
+	    		  gana2=0;
+	    		  empate=0;
+	    		  porc1=0;
+	    		  porc2=0;
+	    		  empate1=0;
+	    		 /* carta[] mano
+	    		  * 1 = {C1,C2,F1,F2,F3,F4,F5};
 	    		  carta[] mano2 = {X1,X2,F1,F2,F3,F4,F5};
 	    		  
 	    		  
-	    		  new Calculate(mano1, mano2);
+	    		  new Calculate(mano1, mano2);*/
 	    		  
 		  }});
 	      atras = (Button)findViewById(R.id.atras);
@@ -165,11 +269,33 @@ public class HeadsUp extends Activity{
 	      llenarcartas();
 	      
 	}
+	static void setgana1(){
+		gana1++;
+		total++;
+	}
+	static void setgana2(){
+		gana2++;
+		total++;
+	}
+	static void setempate(){
+		empate++;
+		total++;
+	}
 	static void win1text(String text){
 		win1.setText(text);
 	}
 	static void win2text(String text){
 		win2.setText(text);
+	}
+	static void lose1text(String text){
+		lose1.setText(text);
+	}
+	static void lose2text(String text){
+		lose2.setText(text);
+	}static void split1text(String text){
+		split1.setText(text);
+	}static void split2text(String text){
+		split2.setText(text);
 	}
 	static void setProgreso(int n){
 		progreso.setProgress(n);

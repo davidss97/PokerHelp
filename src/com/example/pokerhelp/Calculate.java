@@ -1,16 +1,18 @@
 package com.example.pokerhelp;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import android.widget.Toast;
 
 public class Calculate {
 	static int a=0;
 	int rankingmano1;
 	int rankingmano2;
 	int valor1;
-	Calculate(carta[] m1, carta[] m2){
+	Calculate(){}
+	public int Calculator(carta[] m1, carta[] m2){
 		
-		m1 = Ordenar(m1);
+		int b = m1[5].numero;
+		
+		m1 = Ordenar(m1);//solo llega jhasta m[5]
 		m2 = Ordenar(m2);
 		
 		
@@ -30,141 +32,173 @@ public class Calculate {
 		//9: alta
 		
 		if(rankingmano1<rankingmano2){
-			HeadsUp.win1text("100% -> " + rankingmano1 + " < " +rankingmano2 + " ----- " + orden1);
-			HeadsUp.win2text("0%");
+			return 1;
+			//HeadsUp.win1text("100% -> " + rankingmano1 + " < " +rankingmano2 + " ----- " + orden1);
+			//HeadsUp.win2text("0%");
 			
 		}else if(rankingmano1>rankingmano2){
-			HeadsUp.win1text("0% -> "+ rankingmano1 + " // " +rankingmano2+ " ----- " + orden1);
-			HeadsUp.win2text("100%");
+			return 2;
+			//HeadsUp.win1text("0% -> "+ rankingmano1 + " // " +rankingmano2+ " ----- " + orden1);
+			//HeadsUp.win2text("100%");
 		}else{
 			if(rankingmano1==1){
 				if(empate1(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate1(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==2){
 				if(empate2(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate2(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==3){
 				if(empate3(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate3(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==4){
 				if(empate4(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate4(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==5){
 				if(empate5(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate5(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==6){
 				if(empate6(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate6(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==7){
 				if(empate7(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate7(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==8){
 				if(empate8(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate8(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
 			}else if(rankingmano1==9){
 				if(empate9(m1,m2)==1){
 					//Ganador mano1
-					HeadsUp.win1text("100%");
-					HeadsUp.win2text("0%");
+					return 1;
+					//HeadsUp.win1text("100%");
+					//HeadsUp.win2text("0%");
 				}else if(empate9(m1,m2)==2){
 					//Ganador mano2
-					HeadsUp.win1text("0%");
-					HeadsUp.win2text("100%");
+					return 2;
+					//HeadsUp.win1text("0%");
+					//HeadsUp.win2text("100%");
 				}else{
 					//Empate
-					HeadsUp.win1text("50%");
-					HeadsUp.win2text("50%");
+					return 0;
+					//HeadsUp.win1text("50%");
+					//HeadsUp.win2text("50%");
 				}
+			}else{
+				return 0;
 			}
 		}
+		
 		
 		/*	
 		new Timer().schedule(new TimerTask() {          
@@ -616,7 +650,7 @@ public class Calculate {
 	public int empate1(carta[] m1, carta[] m2){
 		int ultimovalor1 = 0;
 		int cuentaEscColor1 = 0;
-		for(int i=0;i<7;i++){
+		for(int i=1;i<7;i++){
 			if(m1[0].numero==m1[i].numero-(cuentaEscColor1+1)
 			   && m1[0].palo == m1[i].palo){
 				
@@ -626,7 +660,7 @@ public class Calculate {
 		}
 		if(cuentaEscColor1<4){
 			cuentaEscColor1=0;
-			for(int i=0;i<7;i++){
+			for(int i=2;i<7;i++){
 				if(m1[1].numero==m1[i].numero-(cuentaEscColor1+1)
 				   && m1[1].palo == m1[i].palo){
 					
@@ -638,7 +672,7 @@ public class Calculate {
 		}
 		if(cuentaEscColor1<4){
 			cuentaEscColor1=0;
-			for(int i=0;i<7;i++){
+			for(int i=3;i<7;i++){
 				if(m1[2].numero==m1[i].numero-(cuentaEscColor1+1)
 				   && m1[2].palo == m1[i].palo){
 					
@@ -651,7 +685,7 @@ public class Calculate {
 		////////////////////////////////////////////////////////
 		int ultimovalor2 = 0;
 		int cuentaEscColor2 = 0;
-		for(int i=0;i<7;i++){
+		for(int i=1;i<7;i++){
 			if(m2[0].numero==m2[i].numero-(cuentaEscColor2+1)
 			   && m2[0].palo == m2[i].palo){
 				
@@ -661,7 +695,7 @@ public class Calculate {
 		}
 		if(cuentaEscColor2<4){
 			cuentaEscColor2=0;
-			for(int i=0;i<7;i++){
+			for(int i=2;i<7;i++){
 				if(m2[1].numero==m2[i].numero-(cuentaEscColor2+1)
 				   && m2[1].palo == m2[i].palo){
 					
@@ -673,7 +707,7 @@ public class Calculate {
 		}
 		if(cuentaEscColor2<4){
 			cuentaEscColor2=0;
-			for(int i=0;i<7;i++){
+			for(int i=3;i<7;i++){
 				if(m2[2].numero==m2[i].numero-(cuentaEscColor2+1)
 				   && m2[2].palo == m2[i].palo){
 					
@@ -831,7 +865,7 @@ public class Calculate {
 	public int empate4(carta[] m1, carta[] m2){
 		int[] ultimovalor1 = new int[]{0,0,0,0,0,0,0};
 		int cuentaColor1 = 0;
-		for(int i=0;i<7;i++){
+		for(int i=1;i<7;i++){
 			if(m1[0].palo == m1[i].palo){
 				cuentaColor1++;
 				ultimovalor1[cuentaColor1] = m1[i].numero;
@@ -840,7 +874,7 @@ public class Calculate {
 		if(cuentaColor1<4){
 			cuentaColor1=0;
 			ultimovalor1 = new int[]{0,0,0,0,0,0,0};
-			for(int i=0;i<7;i++){
+			for(int i=2;i<7;i++){
 				if(m1[1].palo == m1[i].palo){
 					
 					cuentaColor1++;
@@ -852,7 +886,7 @@ public class Calculate {
 		if(cuentaColor1<4){
 			cuentaColor1=0;
 			ultimovalor1 = new int[]{0,0,0,0,0,0,0};
-			for(int i=0;i<7;i++){
+			for(int i=3;i<7;i++){
 				if(m1[2].palo == m1[i].palo){
 					
 					cuentaColor1++;
@@ -864,7 +898,7 @@ public class Calculate {
 		////////////////////////////////////////////////////////
 		int[] ultimovalor2 = new int[]{0,0,0,0,0,0,0};
 		int cuentaColor2 = 0;
-		for(int i=0;i<7;i++){
+		for(int i=1;i<7;i++){
 			if(m2[0].palo == m2[i].palo){
 				
 				cuentaColor2++;
@@ -874,7 +908,7 @@ public class Calculate {
 		if(cuentaColor2<4){
 			cuentaColor2=0;
 			ultimovalor2 = new int[]{0,0,0,0,0,0,0};
-			for(int i=0;i<7;i++){
+			for(int i=2;i<7;i++){
 				if(m2[1].palo == m2[i].palo){
 					
 					cuentaColor2++;
@@ -886,7 +920,7 @@ public class Calculate {
 		if(cuentaColor2<4){
 			cuentaColor2=0;
 			ultimovalor2 = new int[]{0,0,0,0,0,0,0};
-			for(int i=0;i<7;i++){
+			for(int i=3;i<7;i++){
 				if(m2[2].palo == m2[i].palo){
 					
 					cuentaColor2++;
