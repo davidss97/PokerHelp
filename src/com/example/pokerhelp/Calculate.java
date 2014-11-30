@@ -650,15 +650,26 @@ public class Calculate {
 	public int empate1(carta[] m1, carta[] m2){
 		int ultimovalor1 = 0;
 		int cuentaEscColor1 = 0;
-		for(int i=1;i<7;i++){
-			if(m1[0].numero==m1[i].numero-(cuentaEscColor1+1)
-			   && m1[0].palo == m1[i].palo){
-				
-				cuentaEscColor1++;
-				ultimovalor1 = m1[i].numero;
+		if(m1[6].numero == 14){
+			for(int i=0;i<6;i++){
+				if(1==m1[i].numero-(cuentaEscColor1+1)
+					&& m1[6].palo == m1[i].palo){
+					
+					cuentaEscColor1++;
+					ultimovalor1 = m1[i].numero;
+				}
 			}
-		}
-		if(cuentaEscColor1<4){
+		}if(cuentaEscColor1<4){
+			cuentaEscColor1=0;
+			for(int i=1;i<7;i++){
+				if(m1[0].numero==m1[i].numero-(cuentaEscColor1+1)
+				   && m1[0].palo == m1[i].palo){
+					
+					cuentaEscColor1++;
+					ultimovalor1 = m1[i].numero;
+				}
+			}
+		}if(cuentaEscColor1<4){
 			cuentaEscColor1=0;
 			for(int i=2;i<7;i++){
 				if(m1[1].numero==m1[i].numero-(cuentaEscColor1+1)
@@ -685,15 +696,26 @@ public class Calculate {
 		////////////////////////////////////////////////////////
 		int ultimovalor2 = 0;
 		int cuentaEscColor2 = 0;
-		for(int i=1;i<7;i++){
-			if(m2[0].numero==m2[i].numero-(cuentaEscColor2+1)
-			   && m2[0].palo == m2[i].palo){
-				
-				cuentaEscColor2++;
-				ultimovalor2 = m2[i].numero;
+		if(m2[6].numero == 14){
+			for(int i=0;i<6;i++){
+				if(1==m2[i].numero-(cuentaEscColor1+1)
+					&& m2[6].palo == m2[i].palo){
+					
+					cuentaEscColor1++;
+					ultimovalor1 = m2[i].numero;
+				}
 			}
-		}
-		if(cuentaEscColor2<4){
+		}if(cuentaEscColor1<4){
+			cuentaEscColor1=0;
+			for(int i=1;i<7;i++){
+				if(m2[0].numero==m2[i].numero-(cuentaEscColor2+1)
+				   && m2[0].palo == m2[i].palo){
+					
+					cuentaEscColor2++;
+					ultimovalor2 = m2[i].numero;
+				}
+			}
+		}if(cuentaEscColor2<4){
 			cuentaEscColor2=0;
 			for(int i=2;i<7;i++){
 				if(m2[1].numero==m2[i].numero-(cuentaEscColor2+1)
@@ -957,16 +979,27 @@ public class Calculate {
 	public int empate5(carta[] m1, carta[] m2){
 		int ultimovalor1 = 0;
 		int cuentaEsc1 = 0;
-		for(int i=0;i<7;i++){
-			if(m1[0].numero==m1[i].numero-(cuentaEsc1+1)){
-				
-				cuentaEsc1++;
-				ultimovalor1 = m1[i].numero;
+		if(m1[6].numero == 14){
+			for(int i=0;i<6;i++){
+				if(1==m1[i].numero-(cuentaEsc1+1)){
+					
+					cuentaEsc1++;
+					ultimovalor1 = m1[i].numero;
+				}
+			}
+		}if(cuentaEsc1<4){
+			cuentaEsc1=0;
+			for(int i=1;i<7;i++){
+				if(m1[0].numero==m1[i].numero-(cuentaEsc1+1)){
+					
+					cuentaEsc1++;
+					ultimovalor1 = m1[i].numero;
+				}
 			}
 		}
 		if(cuentaEsc1<4){
 			cuentaEsc1=0;
-			for(int i=0;i<7;i++){
+			for(int i=2;i<7;i++){
 				if(m1[1].numero==m1[i].numero-(cuentaEsc1+1)){
 					
 					cuentaEsc1++;
@@ -977,7 +1010,7 @@ public class Calculate {
 		}
 		if(cuentaEsc1<4){
 			cuentaEsc1=0;
-			for(int i=0;i<7;i++){
+			for(int i=3;i<7;i++){
 				if(m1[2].numero==m1[i].numero-(cuentaEsc1+1)){
 					
 					cuentaEsc1++;
@@ -989,16 +1022,26 @@ public class Calculate {
 		////////////////////////////////////////////////////////
 		int ultimovalor2 = 0;
 		int cuentaEsc2 = 0;
-		for(int i=0;i<7;i++){
-			if(m2[0].numero==m2[i].numero-(cuentaEsc2+1)){
-				
-				cuentaEsc2++;
-				ultimovalor2 = m2[i].numero;
+		if(m2[6].numero == 14){
+			for(int i=0;i<6;i++){
+				if(1==m2[i].numero-(cuentaEsc1+1)){
+					
+					cuentaEsc1++;
+					ultimovalor1 = m2[i].numero;
+				}
 			}
-		}
-		if(cuentaEsc2<4){
+		}if(cuentaEsc1<4){
+			cuentaEsc1=0;
+			for(int i=1;i<7;i++){
+				if(m2[0].numero==m2[i].numero-(cuentaEsc2+1)){
+					
+					cuentaEsc2++;
+					ultimovalor2 = m2[i].numero;
+				}
+			}
+		}if(cuentaEsc2<4){
 			cuentaEsc2=0;
-			for(int i=0;i<7;i++){
+			for(int i=2;i<7;i++){
 				if(m2[1].numero==m2[i].numero-(cuentaEsc2+1)){
 					
 					cuentaEsc2++;
@@ -1009,7 +1052,7 @@ public class Calculate {
 		}
 		if(cuentaEsc2<4){
 			cuentaEsc2=0;
-			for(int i=0;i<7;i++){
+			for(int i=3;i<7;i++){
 				if(m2[2].numero==m2[i].numero-(cuentaEsc2+1)){
 					
 					cuentaEsc2++;
