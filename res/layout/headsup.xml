@@ -160,10 +160,16 @@
             android:progress="32" />
 
         <Button
+            android:id="@+id/borrarmesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="borrar" />
+
+        <Button
             android:id="@+id/go"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Go" />
+            android:text="calcular" />
 
         <TextView
             android:id="@+id/win1"

@@ -2,6 +2,7 @@ package com.example.pokerhelp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,14 +18,15 @@ public class HeadsUp extends Activity{
 	Button P1C2;
 	Button P2C1;
 	Button P2C2;
-	Button flop1;
-	Button flop2;
-	Button flop3;
-	Button turn;
-	Button river;
+	public static Button flop1;
+	public static Button flop2;
+	public static Button flop3;
+	public static Button turn;
+	public static Button river;
 	
 	Button GO;
 	Button atras;
+	Button borrarmesa;
 	
 	static int gana1 = 0;
     static int gana2 = 0;
@@ -53,7 +55,8 @@ public class HeadsUp extends Activity{
 	carta X1;
 	carta X2;
 	
-	carta F1,F2,F3,F4,F5;
+	public static carta F1,F2,F3,F4,F5;
+	boolean procesado = false;
 	
 	//carta[] mano1;
 	//carta[] mano2;
@@ -81,17 +84,64 @@ public class HeadsUp extends Activity{
 	      
 	      progreso = (ProgressBar)findViewById(R.id.progreso);
 	      
-	      F1 = new carta(2,2);
-		  flop1.setBackgroundResource(R.drawable.cardclubs2);
-		  F2 = new carta(1,7);
-		  flop2.setBackgroundResource(R.drawable.cardspades7);
-		  F3 = new carta(1,8);
-		  flop3.setBackgroundResource(R.drawable.cardspades8);
-		  F4 = new carta(1,9);
-		  turn.setBackgroundResource(R.drawable.cardspades9);
-		  F5 = new carta(3,12);
-		  river.setBackgroundResource(R.drawable.cardheartsq);
+	      //F1 = new carta(2,2);
+		  //flop1.setBackgroundResource(R.drawable.cardclubs2);
+		  //F2 = new carta(1,7);
+		  //flop2.setBackgroundResource(R.drawable.cardspades7);
+		  //F3 = new carta(1,8);
+		  //flop3.setBackgroundResource(R.drawable.cardspades8);
+		  //F4 = new carta(1,9);
+		  //turn.setBackgroundResource(R.drawable.cardspades9);
+		  //F5 = new carta(3,12);
+		  //river.setBackgroundResource(R.drawable.cardheartsq);
 	      
+		  
+		  flop1.setOnClickListener(new Button.OnClickListener(){
+	    	  @Override
+	    	  public void onClick(View arg0) {
+	    		  //Toast.makeText(getApplicationContext(), "2 de trevoles", Toast.LENGTH_SHORT).show();
+	    		  Intent i = new Intent(getApplicationContext(), flop1.class);
+	    		  startActivity(i);
+	 //   		  //overridePendingTransition(R.anim.hold, R.anim.fadein);
+	    		  
+		  }});
+		  flop2.setOnClickListener(new Button.OnClickListener(){
+	    	  @Override
+	    	  public void onClick(View arg0) {
+	    		  //Toast.makeText(getApplicationContext(), "2 de trevoles", Toast.LENGTH_SHORT).show();
+	    		  Intent i = new Intent(getApplicationContext(), flop2.class);
+	    		  startActivity(i);
+	 //   		  //overridePendingTransition(R.anim.hold, R.anim.fadein);
+	    		  
+		  }});
+		  flop3.setOnClickListener(new Button.OnClickListener(){
+	    	  @Override
+	    	  public void onClick(View arg0) {
+	    		  //Toast.makeText(getApplicationContext(), "2 de trevoles", Toast.LENGTH_SHORT).show();
+	    		  Intent i = new Intent(getApplicationContext(), flop3.class);
+	    		  startActivity(i);
+	 //   		  //overridePendingTransition(R.anim.hold, R.anim.fadein);
+	    		  
+		  }});
+		  turn.setOnClickListener(new Button.OnClickListener(){
+	    	  @Override
+	    	  public void onClick(View arg0) {
+	    		  //Toast.makeText(getApplicationContext(), "2 de trevoles", Toast.LENGTH_SHORT).show();
+	    		  Intent i = new Intent(getApplicationContext(), turn.class);
+	    		  startActivity(i);
+	 //   		  //overridePendingTransition(R.anim.hold, R.anim.fadein);
+	    		  
+		  }});
+		  river.setOnClickListener(new Button.OnClickListener(){
+	    	  @Override
+	    	  public void onClick(View arg0) {
+	    		  //Toast.makeText(getApplicationContext(), "2 de trevoles", Toast.LENGTH_SHORT).show();
+	    		  Intent i = new Intent(getApplicationContext(), river.class);
+	    		  startActivity(i);
+	 //   		  //overridePendingTransition(R.anim.hold, R.anim.fadein);
+	    		  
+		  }});
+		  
 	      GO = (Button)findViewById(R.id.go);
 	      
 	      GO.setOnClickListener(new Button.OnClickListener(){
@@ -99,6 +149,103 @@ public class HeadsUp extends Activity{
 	    	  public void onClick(View arg0) {
 	    		  //1 picas || 2 trevoles || 3 corazones || 4 diamantes
 	    		  
+	    		  try{
+		    		  if(F5.numero != 0){
+		    			  //calcular desde river
+		    			carta[] mano1 = {C1,C2,F1,F2,F3,F4,F5};
+		    	    	carta[] mano2 = {X1,X2,F1,F2,F3,F4,F5};
+	    	    		total = 1;
+	    	    		int rr = new Calculate().Calculator(mano1, mano2);
+	    	    		if(rr==1){gana1++;
+	    	    		}else if(rr==2){gana2++;
+	    	    		}else if(rr==0){empate++;
+	    	    		}
+		    		  }
+	    		  }catch(Exception e1){
+	    		  try{ 
+	    			  if(F4.numero != 0){
+	    				  carta[] Baraja = new carta[44];
+			    		  int contadorBaraja = 0;
+			    		  for(int i=1;i<5;i++){
+			    			  for(int n=2; n<15 ; n++){
+			    				  if(new carta(i,n).numero==C1.numero
+			    					 && new carta(i,n).palo==C1.palo
+			    					 || new carta(i,n).numero==C2.numero
+			    					 && new carta(i,n).palo==C2.palo
+			    					 || new carta(i,n).numero==X1.numero
+			    					 && new carta(i,n).palo==X1.palo
+			    					 || new carta(i,n).numero==X2.numero
+			    					 && new carta(i,n).palo==X2.palo
+			    					 || new carta(i,n).numero==F1.numero
+			    					 && new carta(i,n).palo==F1.palo
+			    					 || new carta(i,n).numero==F2.numero
+			    					 && new carta(i,n).palo==F2.palo
+			    					 || new carta(i,n).numero==F3.numero
+			    					 && new carta(i,n).palo==F3.palo
+			    					 || new carta(i,n).numero==F4.numero
+			    					 && new carta(i,n).palo==F4.palo){
+			    				  }else{
+			    					  Baraja[contadorBaraja] = new carta(i,n);
+			    					  contadorBaraja++;
+			    				  }
+			    			  }
+			    		  }
+		    			  //calcular desde turn
+	    				  for ( int i = 0; i < 44; i++ ) {
+	    					  	carta[] mano1 = {C1,C2,F1,F2,F3,F4,Baraja[i]};
+		  		    	    	carta[] mano2 = {X1,X2,F1,F2,F3,F4,Baraja[i]};
+		  	    	    		total ++;
+		  	    	    		int rr = new Calculate().Calculator(mano1, mano2);
+		  	    	    		if(rr==1){gana1++;
+		  	    	    		}else if(rr==2){gana2++;
+		  	    	    		}else if(rr==0){empate++;
+		  	    	    		}
+	    				  }
+		    		  }
+	    		  }catch(Exception e2){
+	    		  try{ 
+	    			  if(F3.numero != 0
+	    					  && F2.numero != 0
+	    					  && F1.numero != 0){
+	    				  carta[] Baraja = new carta[45];
+			    		  int contadorBaraja = 0;
+			    		  for(int i=1;i<5;i++){
+			    			  for(int n=2; n<15 ; n++){
+			    				  if(new carta(i,n).numero==C1.numero
+			    					 && new carta(i,n).palo==C1.palo
+			    					 || new carta(i,n).numero==C2.numero
+			    					 && new carta(i,n).palo==C2.palo
+			    					 || new carta(i,n).numero==X1.numero
+			    					 && new carta(i,n).palo==X1.palo
+			    					 || new carta(i,n).numero==X2.numero
+			    					 && new carta(i,n).palo==X2.palo
+			    					 || new carta(i,n).numero==F1.numero
+			    					 && new carta(i,n).palo==F1.palo
+			    					 || new carta(i,n).numero==F2.numero
+			    					 && new carta(i,n).palo==F2.palo
+			    					 || new carta(i,n).numero==F3.numero
+			    					 && new carta(i,n).palo==F3.palo){
+			    				  }else{
+			    					  Baraja[contadorBaraja] = new carta(i,n);
+			    					  contadorBaraja++;
+			    				  }
+			    			  }
+			    		  }
+		    			  //calcular desde turn
+	    				  for ( int i = 0; i < 45; i++ ) {
+	    					  for ( int j = i + 1; j < 45; j++ ) {
+		    					  	carta[] mano1 = {C1,C2,F1,F2,F3,Baraja[i],Baraja[j]};
+			  		    	    	carta[] mano2 = {X1,X2,F1,F2,F3,Baraja[i],Baraja[j]};
+			  	    	    		total ++;
+			  	    	    		int rr = new Calculate().Calculator(mano1, mano2);
+			  	    	    		if(rr==1){gana1++;
+			  	    	    		}else if(rr==2){gana2++;
+			  	    	    		}else if(rr==0){empate++;
+			  	    	    		}
+	    					  }
+	    				  }
+		    		  }
+		    	  }catch(Exception e){
 	    		  carta[] Baraja = new carta[48];
 	    		  int contadorBaraja = 0;
 	    		  for(int i=1;i<5;i++){
@@ -147,6 +294,23 @@ public class HeadsUp extends Activity{
 		    			  }
 		    		  }
 	    		  }*/
+	    		  /*Thread t = new Thread(new Runnable() {
+	              		public void run() {
+	              			int perce = 0;
+	      	    		  
+		      	    		  while(!procesado){
+		      	    			  progreso.setProgress(perce);
+		      	    			  perce++;
+		      	    			  if(perce == 100){
+		      	    				  perce=0;
+		      	    			  }
+		      	    		  }
+		                  			
+		              		}
+			          	});
+					
+	    		  t.start();*/
+	    		  
 	    		  
 	    		  for ( int i = 0; i < 48; i++ ) {
 	    		        for ( int j = i + 1; j < 48; j++ ) {
@@ -171,6 +335,11 @@ public class HeadsUp extends Activity{
 	    		            }
 	    		        }
 	    		    }
+	    		  //procesado = true;
+	    		  
+		    	  }
+	    		  }
+	    		  }
 	    		  
 	    		  long porc1 =  gana1*100/total;
 	    		  long porc2 =  gana2*100/total;
@@ -217,6 +386,30 @@ public class HeadsUp extends Activity{
     		  	
 	      }});
 	      
+	      borrarmesa= (Button)findViewById(R.id.borrarmesa);
+	      borrarmesa.setOnClickListener(new Button.OnClickListener(){
+	    	  @Override
+	    	  public void onClick(View arg0) {
+    		  	F1 = null;
+    		  	F2 = null;
+    		  	F3 = null;
+    		  	F4 = null;
+    		  	F5 = null;
+    		  	HeadsUp.flop1.setBackgroundResource(R.drawable.abc_ic_clear);
+    		  	HeadsUp.flop2.setBackgroundResource(R.drawable.abc_ic_clear);
+    		  	HeadsUp.flop3.setBackgroundResource(R.drawable.abc_ic_clear);
+    		  	HeadsUp.turn.setBackgroundResource(R.drawable.abc_ic_clear);
+    		  	HeadsUp.river.setBackgroundResource(R.drawable.abc_ic_clear);
+    		  	
+    		  	//Intent i = getApplicationContext().getPackageManager()
+	  			// .getLaunchIntentForPackage(getApplicationContext().getPackageName() );
+
+	  			// i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK );
+	  			// startActivity(i);
+    		  	
+    		  	
+	      }});
+	      
 	      P1C1 = (Button)findViewById(R.id.P1C1);
 	      //P1C1.setBackgroundResource(R.drawable.cardjoker);
 	      
@@ -229,6 +422,7 @@ public class HeadsUp extends Activity{
 	 //   		  //overridePendingTransition(R.anim.hold, R.anim.fadein);
 	    		  
 		  }});
+	      
 	      
 	      
 	      P1C2 = (Button)findViewById(R.id.P1C2);
@@ -299,6 +493,17 @@ public class HeadsUp extends Activity{
 	}
 	static void setProgreso(int n){
 		progreso.setProgress(n);
+	}
+	public static void cambiarf1(int d){
+		HeadsUp.flop1.setBackgroundResource(d);
+	}public static void cambiarf2(int d){
+		HeadsUp.flop2.setBackgroundResource(d);
+	}public static void cambiarf3(int d){
+		HeadsUp.flop3.setBackgroundResource(d);
+	}public static void cambiart(int d){
+		HeadsUp.turn.setBackgroundResource(d);
+	}public static void cambiarr(int d){
+		HeadsUp.river.setBackgroundResource(d);
 	}
 void llenarcartas(){
 		

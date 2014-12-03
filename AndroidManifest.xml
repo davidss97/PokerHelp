@@ -33,6 +33,11 @@
         <activity android:name=".HeadsP1C2"></activity>
         <activity android:name=".HeadsP2C1"></activity>
         <activity android:name=".HeadsP2C2"></activity>
+        <activity android:name=".flop1"></activity>
+        <activity android:name=".flop2"></activity>
+        <activity android:name=".flop3"></activity>
+        <activity android:name=".turn"></activity>
+        <activity android:name=".river"></activity>
     </application>
 
 </manifest>

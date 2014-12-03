@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class HeadsP1C1 extends Activity{
+public class turn extends Activity{
 	Button clubs2;
 	Button clubs3;
 	Button clubs4;
@@ -81,11 +81,9 @@ public class HeadsP1C1 extends Activity{
 	    		  valor1 = "2";
 	    		  Toast.makeText(getApplicationContext(), "2 de trevoles", Toast.LENGTH_SHORT).show();
 	    		  
-	    		  
-	    		  
-	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,2);HeadsUp.cambiart(R.drawable.cardclubs2);
+	    		  //HeadsUp.F4 = new carta(3,);HeadsUp.cambiart(R.drawable.cardclubs2);
+	    		  finish();
 	    		  
 	    		  
 		  }});
@@ -99,10 +97,10 @@ public class HeadsP1C1 extends Activity{
 	    		  valor1 = "3";
 	    		  Toast.makeText(getApplicationContext(), "3 de trevoles", Toast.LENGTH_SHORT).show();
 
+	    		  HeadsUp.F4 = new carta(2,3);HeadsUp.cambiart(R.drawable.cardclubs3);
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-	    		  
+	    		  //HeadsUp.F4 = new carta(3,);HeadsUp.cambiart(R.drawable.cardclubs3);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -116,8 +114,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "4 de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,4);HeadsUp.cambiart(R.drawable.cardclubs4);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -131,8 +129,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "5 de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,5);HeadsUp.cambiart(R.drawable.cardclubs5);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -146,8 +144,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "6 de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,6);HeadsUp.cambiart(R.drawable.cardclubs6);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -161,8 +159,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "7 de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,7);HeadsUp.cambiart(R.drawable.cardclubs7);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -176,8 +174,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "8 de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,8);HeadsUp.cambiart(R.drawable.cardclubs8);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -191,8 +189,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "9 de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,9);HeadsUp.cambiart(R.drawable.cardclubs9);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -206,8 +204,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "10 de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,10);HeadsUp.cambiart(R.drawable.cardclubs10);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -221,8 +219,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "J de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,11);HeadsUp.cambiart(R.drawable.cardclubsj);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -236,8 +234,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "Q de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,12);HeadsUp.cambiart(R.drawable.cardclubsq);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -251,8 +249,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "K de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,13);HeadsUp.cambiart(R.drawable.cardclubsk);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -266,8 +264,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "A de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(2,14);HeadsUp.cambiart(R.drawable.cardclubsa);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      //////////////////////////////////////////////////////////////////////////  
@@ -281,8 +279,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "2 de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,2);HeadsUp.cambiart(R.drawable.carddiamonds2);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -296,8 +294,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "3 de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,3);HeadsUp.cambiart(R.drawable.carddiamonds3);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -311,9 +309,9 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "4 de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; 
-	    		  Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,4);HeadsUp.cambiart(R.drawable.carddiamonds4);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  
 		  }});
 	      
 	      diamonds5 = (Button)findViewById(R.id.diamonds5);
@@ -326,8 +324,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "5 de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,5);HeadsUp.cambiart(R.drawable.carddiamonds5);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -341,8 +339,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "6 de trevoles", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,6);HeadsUp.cambiart(R.drawable.carddiamonds6);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -356,8 +354,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "7 de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,7);HeadsUp.cambiart(R.drawable.carddiamonds7);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -371,8 +369,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "8 de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,8);HeadsUp.cambiart(R.drawable.carddiamonds8);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -386,8 +384,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "9 de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,9);HeadsUp.cambiart(R.drawable.carddiamonds9);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -401,8 +399,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "10 de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,10);HeadsUp.cambiart(R.drawable.carddiamonds10);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -416,8 +414,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "J de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,11);HeadsUp.cambiart(R.drawable.carddiamondsj);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -431,8 +429,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "Q de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,12);HeadsUp.cambiart(R.drawable.carddiamondsq);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -446,8 +444,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "K de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,13);HeadsUp.cambiart(R.drawable.carddiamondsk);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -461,8 +459,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "A de diamantes", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(4,14);HeadsUp.cambiart(R.drawable.carddiamondsa);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 
@@ -476,8 +474,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "2 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,2);HeadsUp.cambiart(R.drawable.cardspades2);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -491,8 +489,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "3 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,3);HeadsUp.cambiart(R.drawable.cardspades3);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -506,8 +504,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "4 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,4);HeadsUp.cambiart(R.drawable.cardspades4);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -521,8 +519,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "5 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,5);HeadsUp.cambiart(R.drawable.cardspades5);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -536,8 +534,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "6 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,6);HeadsUp.cambiart(R.drawable.cardspades6);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -551,8 +549,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "7 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,7);HeadsUp.cambiart(R.drawable.cardspades7);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -566,8 +564,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "8 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,8);HeadsUp.cambiart(R.drawable.cardspades8);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -581,8 +579,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "9 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,9);HeadsUp.cambiart(R.drawable.cardspades9);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -596,8 +594,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "10 de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,10);HeadsUp.cambiart(R.drawable.cardspades10);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -611,8 +609,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "J de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,11);HeadsUp.cambiart(R.drawable.cardspadesj);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -626,8 +624,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "Q de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,12);HeadsUp.cambiart(R.drawable.cardspadesq);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -641,8 +639,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "K de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,13);HeadsUp.cambiart(R.drawable.cardspadesk);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -656,8 +654,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "A de picas", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(1,14);HeadsUp.cambiart(R.drawable.cardspadesa);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 
@@ -671,8 +669,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "2 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,2);HeadsUp.cambiart(R.drawable.cardhearts2);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -686,8 +684,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "3 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,3);HeadsUp.cambiart(R.drawable.cardhearts3);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -701,8 +699,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "4 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,4);HeadsUp.cambiart(R.drawable.cardhearts4);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -716,8 +714,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "5 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,5);HeadsUp.cambiart(R.drawable.cardhearts5);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -731,8 +729,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "6 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,6);HeadsUp.cambiart(R.drawable.cardhearts6);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -746,8 +744,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "7 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,7);HeadsUp.cambiart(R.drawable.cardhearts7);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -761,8 +759,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "8 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,8);HeadsUp.cambiart(R.drawable.cardhearts8);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -776,8 +774,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "9 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,9);HeadsUp.cambiart(R.drawable.cardhearts9);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -791,8 +789,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "10 de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,10);HeadsUp.cambiart(R.drawable.cardhearts10);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -806,8 +804,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "J de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,11);HeadsUp.cambiart(R.drawable.cardheartsj);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -821,8 +819,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "Q de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,12);HeadsUp.cambiart(R.drawable.cardheartsq);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -836,8 +834,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "K de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,13);HeadsUp.cambiart(R.drawable.cardheartsk);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      
@@ -851,8 +849,8 @@ public class HeadsP1C1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "A de corazones", Toast.LENGTH_SHORT).show();
 
 	    		  
-	    		  HeadsUp.P1C1palo=palo1;
-	    		  HeadsUp.P1C1valor=valor1; Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+	    		  HeadsUp.F4 = new carta(3,14);HeadsUp.cambiart(R.drawable.cardheartsa);
+	    		  finish();//Intent i = new Intent(getApplicationContext(), HeadsUp.class); startActivity(i); overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	    		  
 		  }});
 	      ////////////////////////////////////////////////////////////////////////// 
