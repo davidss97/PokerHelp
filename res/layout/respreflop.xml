@@ -3,6 +3,7 @@
     android:id="@+id/respreflop"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -40,7 +41,7 @@
         android:rating="2.5" />
 
     <Button
-        android:id="@+id/atras2"
+        android:id="@+id/caraacara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/chipwhite"

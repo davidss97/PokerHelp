@@ -40,7 +40,7 @@ public class resultPreflop extends Activity{
 	    	  public void onClick(View arg0) {
 	    		  Toast.makeText(getApplicationContext(), "CARTA 1", Toast.LENGTH_SHORT).show();
 		  }});
-	      atras = (Button)findViewById(R.id.atras2);
+	      atras = (Button)findViewById(R.id.caraacara);
 	      
 	      atras.setOnClickListener(new Button.OnClickListener(){
 	    	  @Override

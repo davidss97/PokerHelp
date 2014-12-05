@@ -26,9 +26,9 @@
         </activity>
         <activity android:name=".preflopfirstcard"></activity>
         <activity android:label="Imagen" android:name=".Image"></activity>
-        <activity android:name=".resultPreflop"></activity>
+        <activity android:name=".resultPreflop" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
         <activity android:name=".preflopsecondcard"></activity>
-        <activity android:name=".HeadsUp"></activity>
+        <activity android:name=".HeadsUp" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
         <activity android:name=".HeadsP1C1"></activity>
         <activity android:name=".HeadsP1C2"></activity>
         <activity android:name=".HeadsP2C1"></activity>

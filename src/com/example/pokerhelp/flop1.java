@@ -82,7 +82,6 @@ public class flop1 extends Activity{
 	    		  Toast.makeText(getApplicationContext(), "2 de trevoles", Toast.LENGTH_SHORT).show();
 	    		  
 	    		  HeadsUp.F1 = new carta(2,2);HeadsUp.cambiarf1(R.drawable.cardclubs2);
-	    		  //HeadsUp.F1 = new carta(3,);HeadsUp.cambiarf1(R.drawable.cardclubs2);
 	    		  finish();
 	    		  
 	    		  

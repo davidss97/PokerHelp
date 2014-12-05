@@ -1,5 +1,7 @@
 package com.example.pokerhelp;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -341,16 +343,21 @@ public class HeadsUp extends Activity{
 	    		  }
 	    		  }
 	    		  
-	    		  long porc1 =  gana1*100/total;
-	    		  long porc2 =  gana2*100/total;
-	    		  long empate1 =  empate*100/total;
+	    		  double porc1 =  (float)gana1*100/total;
+	    		  double porc2 =  (float)gana2*100/total;
+	    		  double empate1 =  (float)empate*100/total;
 	    		  
-	    		  win1text( Long.toString(porc1) +"% win" );
-	    		  win2text( Long.toString(porc2) +"% win");
-	    		  lose1text( Long.toString(porc2) +"% lose");
-	    		  lose2text( Long.toString(porc1) +"% lose");
-	    		  split1text( Long.toString(empate1) +"% split");
-	    		  split2text( Long.toString(empate1) +"% split");
+	    		  porc1 = Math.round(porc1*100.0)/100.0;
+	    		  porc2 = Math.round(porc2*100.0)/100.0;
+	    		  empate1 = Math.round(empate1*100.0)/100.0;
+	    		  
+
+	    		  win1text( Double.toString(porc1) +"% win" );
+	    		  win2text( Double.toString(porc2) +"% win");
+	    		  lose1text( Double.toString(porc2) +"% lose");
+	    		  lose2text( Double.toString(porc1) +"% lose");
+	    		  split1text( Double.toString(empate1) +"% split");
+	    		  split2text( Double.toString(empate1) +"% split");
 	    		  
 	    		  //win1text(porc1 +"% win");
 	    		  

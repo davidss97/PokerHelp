@@ -12,7 +12,7 @@
     tools:context="com.example.pokerhelp.MainActivity$PlaceholderFragment" >
 
     <Button
-        android:id="@+id/atras2"
+        android:id="@+id/caraacara"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

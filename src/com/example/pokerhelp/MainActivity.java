@@ -34,8 +34,7 @@ public class MainActivity extends Activity {
     		  startActivity(i);
 	  }});
       
-      heads = (Button)findViewById(R.id.atras2);
-      //animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
+      heads = (Button)findViewById(R.id.caraacara);
       heads.setOnClickListener(new Button.OnClickListener(){
     	  @Override
     	  public void onClick(View arg0) {
