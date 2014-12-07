@@ -243,7 +243,7 @@ public class Calculate {
 				m[6] = aux;
 			}
 			
-			if(a<6){//cambiar de posicion parejas para poder calcular escaleras y colores o modificar como buscar la escalera***
+			if(a<6){
 				if( m[a].numero == m[a+1].numero) {
 					if( a < 5){
 					if( m[a].palo == m[a+2].palo) {
@@ -296,7 +296,7 @@ public class Calculate {
 				cuentaColor++;
 				
 			}
-		}if(cuentaColor<5){
+		}if(cuentaColor<4){
 			cuentaColor=0;	
 			for(int i=2;i<7;i++){
 				if(m[1].palo == m[i].palo){
@@ -305,7 +305,7 @@ public class Calculate {
 					
 				}
 		}}
-		if(cuentaColor<5){
+		if(cuentaColor<4){
 			cuentaColor=0;
 			for(int i=3;i<7;i++){
 				if(m[2].palo == m[i].palo){
@@ -325,7 +325,7 @@ public class Calculate {
 					cuentaEscColor++;
 				}
 			}
-		}if(cuentaEscColor<5){
+		}if(cuentaEscColor<4){
 			cuentaEscColor=0;
 			for(int i=1;i<7;i++){
 				if(m[0].numero==m[i].numero-(cuentaEscColor+1)
@@ -336,7 +336,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEscColor<5){
+		if(cuentaEscColor<4){
 			cuentaEscColor=0;
 			for(int i=2;i<7;i++){
 				if(m[1].numero==m[i].numero-(cuentaEscColor+1)
@@ -347,7 +347,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEscColor<5){
+		if(cuentaEscColor<4){
 			cuentaEscColor=0;
 			for(int i=3;i<7;i++){
 				if(m[2].numero==m[i].numero-(cuentaEscColor+1)
@@ -369,7 +369,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEscaleraNormal<5){
+		if(cuentaEscaleraNormal<4){
 			cuentaEscaleraNormal=0;
 			for(int i=1;i<7;i++){
 				if(m[0].numero==m[i].numero-(cuentaEscaleraNormal+1)){
@@ -379,7 +379,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEscaleraNormal<5){
+		if(cuentaEscaleraNormal<4){
 			cuentaEscaleraNormal=0;
 			for(int i=2;i<7;i++){
 				if(m[1].numero==m[i].numero-(cuentaEscaleraNormal+1)){
@@ -389,7 +389,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEscaleraNormal<5){
+		if(cuentaEscaleraNormal<4){
 			cuentaEscaleraNormal=0;
 			for(int i=3;i<7;i++){
 				if(m[2].numero==m[i].numero-(cuentaEscaleraNormal+1)){
@@ -403,7 +403,7 @@ public class Calculate {
 		
 		if(
 				
-				cuentaEscColor>4
+				cuentaEscColor>=4
 				
 				)
 		{
@@ -437,20 +437,6 @@ public class Calculate {
 		
 		else if(
 				trio
-				/*((m[0].numero==(m[1].numero)
-				&& m[1].numero==(m[2].numero)))
-				||
-				((m[1].numero==((m[2].numero))
-				&& m[2].numero==((m[3].numero))))
-				||
-				((m[2].numero==(m[3].numero)
-				&& m[3].numero==(m[4].numero)))
-				||
-				((m[3].numero==(m[4].numero)
-				&& m[4].numero==(m[5].numero)))
-				||
-				((m[4].numero==(m[5].numero)
-				&& m[5].numero==(m[6].numero)))*/
 		){//Si hay un trio pasara a mirar si hay un full house
 			if(((m[0].numero==(m[1].numero)//1
 				&& m[1].numero==(m[2].numero)))){
@@ -507,34 +493,19 @@ public class Calculate {
 			}
 			
 		}
-		if(cuentaColor>4){
+		if(cuentaColor>=4){
 			cuentaColor = 0;
 			cuentaEscColor = 0;
 			cuentaEscaleraNormal = 0;
 			return 4;
 		}
-		if(cuentaEscaleraNormal>4){
+		if(cuentaEscaleraNormal>=4){
 			cuentaColor = 0;
 			cuentaEscColor = 0;
 			cuentaEscaleraNormal = 0;
 			return 5;
 		}
 		if(trio
-				/*
-				(m[0].numero==(m[1].numero)
-				&& m[1].numero==(m[2].numero))
-				||
-				(m[1].numero==(m[2].numero)
-				&& m[2].numero==(m[3].numero))
-				||
-				(m[2].numero==(m[3].numero)
-				&& m[3].numero==(m[4].numero))
-				||
-				(m[3].numero==(m[4].numero)
-				&& m[4].numero==(m[5].numero))
-				||
-				(m[4].numero==(m[5].numero)
-				&& m[5].numero==(m[6].numero))*/
 		){
 			cuentaColor = 0;
 			cuentaEscColor = 0;
@@ -628,7 +599,7 @@ public class Calculate {
 				||
 				((m[4].numero==(m[5].numero)))
 				||
-				((m[4].numero==(m[5].numero)))
+				((m[5].numero==(m[6].numero)))
 		){
 			cuentaColor = 0;
 			cuentaEscColor = 0;
@@ -653,7 +624,7 @@ public class Calculate {
 					ultimovalor1 = m1[i].numero;
 				}
 			}
-		}if(cuentaEscColor1<5){
+		}if(cuentaEscColor1<4){
 			cuentaEscColor1=0;
 			for(int i=1;i<7;i++){
 				if(m1[0].numero==m1[i].numero-(cuentaEscColor1+1)
@@ -663,7 +634,7 @@ public class Calculate {
 					ultimovalor1 = m1[i].numero;
 				}
 			}
-		}if(cuentaEscColor1<5){
+		}if(cuentaEscColor1<4){
 			cuentaEscColor1=0;
 			for(int i=2;i<7;i++){
 				if(m1[1].numero==m1[i].numero-(cuentaEscColor1+1)
@@ -675,7 +646,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEscColor1<5){
+		if(cuentaEscColor1<4){
 			cuentaEscColor1=0;
 			for(int i=3;i<7;i++){
 				if(m1[2].numero==m1[i].numero-(cuentaEscColor1+1)
@@ -699,7 +670,7 @@ public class Calculate {
 					ultimovalor1 = m2[i].numero;
 				}
 			}
-		}if(cuentaEscColor1<5){
+		}if(cuentaEscColor1<4){
 			cuentaEscColor1=0;
 			for(int i=1;i<7;i++){
 				if(m2[0].numero==m2[i].numero-(cuentaEscColor2+1)
@@ -709,7 +680,7 @@ public class Calculate {
 					ultimovalor2 = m2[i].numero;
 				}
 			}
-		}if(cuentaEscColor2<5){
+		}if(cuentaEscColor2<4){
 			cuentaEscColor2=0;
 			for(int i=2;i<7;i++){
 				if(m2[1].numero==m2[i].numero-(cuentaEscColor2+1)
@@ -721,7 +692,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEscColor2<5){
+		if(cuentaEscColor2<4){
 			cuentaEscColor2=0;
 			for(int i=3;i<7;i++){
 				if(m2[2].numero==m2[i].numero-(cuentaEscColor2+1)
@@ -887,7 +858,7 @@ public class Calculate {
 				ultimovalor1[cuentaColor1] = m1[i].numero;
 			}
 		}
-		if(cuentaColor1<5){
+		if(cuentaColor1<4){
 			cuentaColor1=0;
 			ultimovalor1 = new int[]{0,0,0,0,0,0,0};
 			for(int i=2;i<7;i++){
@@ -899,7 +870,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaColor1<5){
+		if(cuentaColor1<4){
 			cuentaColor1=0;
 			ultimovalor1 = new int[]{0,0,0,0,0,0,0};
 			for(int i=3;i<7;i++){
@@ -921,7 +892,7 @@ public class Calculate {
 				ultimovalor2[cuentaColor2] = m2[i].numero;
 			}
 		}
-		if(cuentaColor2<5){
+		if(cuentaColor2<4){
 			cuentaColor2=0;
 			ultimovalor2 = new int[]{0,0,0,0,0,0,0};
 			for(int i=2;i<7;i++){
@@ -933,7 +904,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaColor2<5){
+		if(cuentaColor2<4){
 			cuentaColor2=0;
 			ultimovalor2 = new int[]{0,0,0,0,0,0,0};
 			for(int i=3;i<7;i++){
@@ -981,7 +952,7 @@ public class Calculate {
 					ultimovalor1 = m1[i].numero;
 				}
 			}
-		}if(cuentaEsc1<5){
+		}if(cuentaEsc1<4){
 			cuentaEsc1=0;
 			for(int i=1;i<7;i++){
 				if(m1[0].numero==m1[i].numero-(cuentaEsc1+1)){
@@ -991,7 +962,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEsc1<5){
+		if(cuentaEsc1<4){
 			cuentaEsc1=0;
 			for(int i=2;i<7;i++){
 				if(m1[1].numero==m1[i].numero-(cuentaEsc1+1)){
@@ -1002,7 +973,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEsc1<5){
+		if(cuentaEsc1<4){
 			cuentaEsc1=0;
 			for(int i=3;i<7;i++){
 				if(m1[2].numero==m1[i].numero-(cuentaEsc1+1)){
@@ -1024,7 +995,7 @@ public class Calculate {
 					ultimovalor1 = m2[i].numero;
 				}
 			}
-		}if(cuentaEsc1<5){
+		}if(cuentaEsc1<4){
 			cuentaEsc1=0;
 			for(int i=1;i<7;i++){
 				if(m2[0].numero==m2[i].numero-(cuentaEsc2+1)){
@@ -1033,7 +1004,7 @@ public class Calculate {
 					ultimovalor2 = m2[i].numero;
 				}
 			}
-		}if(cuentaEsc2<5){
+		}if(cuentaEsc2<4){
 			cuentaEsc2=0;
 			for(int i=2;i<7;i++){
 				if(m2[1].numero==m2[i].numero-(cuentaEsc2+1)){
@@ -1044,7 +1015,7 @@ public class Calculate {
 				}
 			}
 		}
-		if(cuentaEsc2<5){
+		if(cuentaEsc2<4){
 			cuentaEsc2=0;
 			for(int i=3;i<7;i++){
 				if(m2[2].numero==m2[i].numero-(cuentaEsc2+1)){
@@ -1320,7 +1291,8 @@ public class Calculate {
 		if ((m1[6].numero==m1[5].numero
 			||m1[5].numero==m1[4].numero)){
 			valorPar1=m1[5].numero;
-		}else if ((m1[4].numero==m1[3].numero
+		}
+		else if ((m1[4].numero==m1[3].numero
 			||m1[3].numero==m1[2].numero)){
 			valorPar1=m1[3].numero;
 		}
@@ -1332,7 +1304,8 @@ public class Calculate {
 		if ((m2[6].numero==m2[5].numero
 			||m2[5].numero==m2[4].numero)){
 			valorPar2=m2[5].numero;
-		}else if ((m2[4].numero==m2[3].numero
+		}
+		else if ((m2[4].numero==m2[3].numero
 			||m2[3].numero==m2[2].numero)){
 			valorPar2=m2[3].numero;
 		}
